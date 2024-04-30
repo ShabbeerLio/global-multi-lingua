@@ -1,0 +1,36 @@
+.HAbout{
+    width: 100%;
+}
+
+.Habout-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.habout-left{
+    width: 50%;
+    padding-left: 5rem;
+}
+
+.habout-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+.habout-button a{
+    background-color: #ffcc00;
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+.habout-right{
+    width: 50%;
+}
+.habout-right img{
+    width: 100%;
+    object-fit: cover;
+}
