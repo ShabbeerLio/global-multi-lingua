@@ -65,7 +65,7 @@
   position: absolute;
   height: 2px;
   width: 100%;
-  background: white;
+  background: black;
   border-radius: 1px;
   opacity: 1;
   left: 0;
@@ -139,8 +139,8 @@
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  color: #FFCC00; /* Blue color */
-  border-bottom: 2px solid #FFCC00; /* Underline */
+  color: #1b2267; /* Blue color */
+  border-bottom: 2px solid #1b2267; /* Underline */
 }
 
 .call-button p {
@@ -157,14 +157,14 @@
   transition: opacity 0.3s ease-in-out;
   cursor: pointer;
   transition: all 0.3s;
-  background-color: #FFCC00;
+  background-color: #1b2267;
   border-radius: 5px;
   margin-left: 20px;
 }
 
 .call-button p a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .call-button p a svg {
@@ -174,7 +174,7 @@
 
 .navbar-nav .dropdown-menu {
   background-color: white;
-  border-top: 1px solid #FFCC00;
+  border-top: 1px solid #1b2267;
   border-radius: 0px;
   /* top: 100%; */
   padding: 0;
@@ -287,7 +287,7 @@
   transition: 0.3s ease-in-out;
 }
 .fix-icon-enquery p:hover {
-  background-color: #ffb000;
+  background-color: #1b2267;
   color: black;
 }
 
@@ -367,7 +367,7 @@
 }
 @media only screen and (max-width: 540px) {
   .company-logo img {
-    max-height: 80px;
+    max-height: 65px;
   }
 
   .company-logo img {

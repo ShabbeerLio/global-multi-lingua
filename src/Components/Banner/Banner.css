@@ -25,7 +25,7 @@
 .banner-heading h1 {
   position: relative;
   text-align: center;
-  color: #ffcc00;
+  color: #1b2267;
   padding: 10px 0px;
   visibility: visible;
   animation-delay: 0.4s;
@@ -47,11 +47,11 @@
   justify-content: center;
 }
 .banner-heading .banner-button a {
-  background-color: #ffcc00;
+  background-color: #1b2267;
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .banner-image:after {
