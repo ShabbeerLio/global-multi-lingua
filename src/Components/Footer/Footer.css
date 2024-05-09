@@ -1,0 +1,152 @@
+.Footer {
+  padding: 3rem 0rem 6rem 0rem;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.footer-main {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+
+.footer-logo {
+  /* text-align: center; */
+  color: white;
+  margin-bottom: 20px;
+}
+.footer-logo img {
+  width: 70%;
+  object-fit: cover;
+}
+.footer-logo p {
+  /* width: 70%; */
+  color: black;
+  margin: 2rem 0rem;
+  font-size: 14px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b2267;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.footer-social svg {
+  font-size: 15px;
+  color: white;
+}
+
+.footer-menu {
+  width: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column; */
+}
+.footer-menu h3 {
+  font-size: 20px;
+  color: #1b2267;
+}
+.footer-menu h3:after {
+  content: "";
+  margin-top: 2px;
+  display: flex;
+  height: 2px;
+  width: 25%;
+  border-radius: 50px;
+  background-color: #1b2267;
+}
+
+.footer-menu ul {
+  padding: 0;
+}
+
+.footer-menu ul li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 0px;
+  font-size: 14px;
+}
+.footer-menu ul li a:hover {
+  color: #1b2267;
+}
+
+.footer-form {
+  background-color: rgba(58, 58, 58, 0.212);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.footer-copyright {
+  border-top: 1px solid rgba(85, 85, 85, 0.438);
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+.footer-copyright p {
+  padding-left: 20px;
+  font-size: 14px;
+  margin: 10px 0px;
+}
+.footer-copyright p a {
+  color: black;
+  text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  .footer-main {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .footer-logo img {
+    width: 40%;
+  }
+  .footer-copyright {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .footer-copyright p {
+    font-size: 12px;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  .footer-contact {
+    display: block;
+  }
+  .footer-contact .call-number {
+    display: flex !important;
+  }
+
+  .footer-contact .instagram a {
+    justify-content: center;
+    padding: 20px 0px;
+  }
+}

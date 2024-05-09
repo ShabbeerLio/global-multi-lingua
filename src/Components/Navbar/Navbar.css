@@ -22,7 +22,7 @@
   width: 100%;
   object-fit: cover;
   padding: 15px;
-  max-height: 90px;
+  max-height: 70px;
 }
 
 .navbar {
@@ -34,7 +34,7 @@
 }
 
 .navbar-collapse {
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 /* animated button */
@@ -131,17 +131,18 @@
   padding: 10px 12px !important;
   font-size: 1rem;
   text-transform: capitalize;
+  font-weight: 500;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: black; /* Default text color */
-  border-bottom: none; /* No underline by default */
+  color: black; 
+  border-bottom: none; 
 }
 
-.navbar-light .navbar-nav .nav-link.active {
-  color: #1b2267; /* Blue color */
-  border-bottom: 2px solid #1b2267; /* Underline */
-}
+/* .navbar-light .navbar-nav .nav-link.active {
+  color: #1b2267; 
+  border-bottom: 2px solid #1b2267; 
+} */
 
 .call-button p {
   margin: 0;
@@ -154,17 +155,21 @@
   width: 130px;
   padding: 10px 20px;
   font-weight: 500;
-  transition: opacity 0.3s ease-in-out;
   cursor: pointer;
   transition: all 0.3s;
-  background-color: #1b2267;
+  background-color: #F4E08E;
   border-radius: 5px;
   margin-left: 20px;
+  transition: .3s ease-in-out;
+}
+.call-button p:hover {
+  background-color: #ffb000;
+  color: black;
 }
 
 .call-button p a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .call-button p a svg {

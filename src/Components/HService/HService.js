@@ -32,6 +32,7 @@ const HService = () => {
                     <ReactOwlCarousel
                         items={6}
                         nav={false}
+                        // loop={true}
                         autoplay={{
                             delay: 1500,
                             disableOnInteraction: false,
@@ -43,14 +44,13 @@ const HService = () => {
                             <div className="hservice-card">
 
                                 <div className="hsrevices-image">
-                                    <img src="https://static.vecteezy.com/system/resources/previews/040/073/375/non_2x/confident-female-interpreter-translate-document-from-foreign-language-to-english-use-pc-app-make-notes-in-paper-copy-professional-young-woman-editor-correct-errors-mistakes-in-printed-article-text-free-photo.jpg" alt="" />
+                                    <img src={item.cover} alt="" />
                                 </div>
                                 <h4>{item.title}</h4>
                                 <div className="hservice-button">
                                     <Link>Read More <FaArrowRightLong /></Link>
                                 </div>
                             </div>
-
                         ))}
                     </ReactOwlCarousel>
                 </div>

@@ -1,0 +1,29 @@
+.PresClients {
+    padding: 5rem 0rem;
+    width: 100%;
+    /* background-color: #00678612; */
+  }
+  
+  .PresClients-main {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .presClients-card{
+    margin: 1rem;
+  }
+
+  .presClients-image img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 1200px) {
+    .PresClients-main {
+      max-width: 1140px;
+    }
+  }

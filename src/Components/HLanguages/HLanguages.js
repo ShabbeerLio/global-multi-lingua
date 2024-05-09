@@ -2,6 +2,7 @@ import React from 'react'
 import "./HLanguages.css"
 import HLanguageData from './HLanguagesData'
 import moreimg from "../../Assets/Languages/languages-00.svg"
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const HLanguages = () => {
     return (
@@ -22,7 +23,7 @@ const HLanguages = () => {
                         <img src="https://www.verbalcraft.com/wp-content/uploads/2024/02/languages-big.png" alt="" />
                         <div className="hlanguages-card">
                             <img src={moreimg} alt="" />
-                            <h3>And over 90 more languages</h3>
+                            <h3>And over 50 more languages  <span>View More <FaArrowRightLong /></span></h3>
                         </div>
                     </div>
                 </div>

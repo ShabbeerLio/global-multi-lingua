@@ -158,7 +158,7 @@ const Navbar = (props) => {
                                                 className={`nav-link ${activeLink === '/contact' ? 'active' : ''}`}
                                                 to="/contact"
                                                 onClick={() => closeMenu('/contact')}
-                                            >Contact</Link>
+                                            >Contact Us</Link>
                                         </li>
                                         <div className="nav-action">
                                             <div className="call-button">

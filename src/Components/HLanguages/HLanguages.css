@@ -1,5 +1,5 @@
 .HLanguages {
-  padding: 3rem 0rem;
+  padding: 5rem 0rem;
   width: 100%;
   background-color: #f1f1f1;
 }
@@ -21,7 +21,7 @@
   margin-bottom: 2rem;
 }
 .HLanguages-heading h2 {
-  font-size: 30px;
+  font-size: 40px;
   color: black;
   margin-bottom: 1rem;
 }
@@ -31,51 +31,58 @@
   color: black;
 }
 
-.hlanguages-box{
-    display: grid;
-    grid-template-columns: 300px 1fr 300px;
-    gap: 40px;
-    margin-bottom: 30px;
+.hlanguages-box {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
-.hlanguages-card{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 20px 0 rgba(49, 61, 85, 0.05);
-    width: 100%;
-    position: relative;
-    z-index: 2;
+.hlanguages-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 20px 0 rgba(49, 61, 85, 0.05);
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
 }
 
-.hlanguages-card2{
-    font-size: 22px;
-    grid-column: 2 / 3;
-    grid-row: 1 / 6;
-    transform: translateY(12px);
+.hlanguages-card2 {
+  font-size: 22px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 6;
+  transform: translateY(12px);
 }
-.hlanguages-card2 img{
-    width: 100%;
-    object-fit: cover;
+.hlanguages-card2 img {
+  width: 100%;
+  object-fit: cover;
 }
-.hlanguages-card2 .hlanguages-card img{
-    width: 20%;
-    object-fit: cover;
+.hlanguages-card2 .hlanguages-card img {
+  width: 20%;
+  object-fit: cover;
 }
 
-.hlanguages-card img{
-    max-width: 100%;
-    object-fit: cover;
+.hlanguages-card img {
+  max-width: 100%;
+  object-fit: cover;
 }
-.hlanguages-card h3{
-    font-size: 20px;
+.hlanguages-card h3 {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.hlanguages-card h3 span {
+  margin-top: 1rem;
+  font-size: 14px;
 }
 
 @media (min-width: 1200px) {
-    .HLanguages-main {
-      max-width: 1140px;
-    }
+  .HLanguages-main {
+    max-width: 1140px;
   }
+}

@@ -1,0 +1,13 @@
+.blog2-wave{
+    background-color: white;
+    position: relative;
+    rotate: 180deg;
+    height: 200px;
+  }
+  .blog2-wave svg{
+    position: absolute;
+    bottom: 0px;
+  }
+  .blog2-wave svg path{
+    fill: #00678612;
+  }

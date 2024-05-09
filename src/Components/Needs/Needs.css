@@ -1,0 +1,99 @@
+.Needs {
+  padding: 5rem 0rem;
+  width: 100%;
+  background-color: #00678612;
+}
+
+.Needs-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.need-box {
+  display: flex;
+  /* gap: 2rem; */
+}
+
+.needs-left {
+  width: 45%;
+  z-index: 2;
+}
+.needs-left img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 2/2;
+  border-radius: 25% 8px 15% 8px;
+}
+
+.needs-right {
+  width: 55%;
+}
+.needs-right h2 {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  font-size: 58px;
+  font-weight: 600;
+}
+.needs-right p {
+  margin-left: 2rem;
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+.needs-right .need-right-box {
+  background-color: #f4e08e;
+  padding: 2rem;
+  border-radius: 0 8px 8px 0px;
+  position: relative;
+  height: 280px;
+}
+.needs-right .need-right-box:before {
+  content: "";
+  background-color: #f4e08e;
+  padding: 2rem;
+  border-radius: 0 8px 0px 20%;
+  height: 280px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: -49%;
+    z-index: 1;
+}
+.needs-right ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: black;
+  font-weight: 500;
+}
+.needs-right ul {
+  padding-left: 0px;
+}
+.needs-right ul li svg {
+  color: black;
+  margin-right: 1rem;
+}
+
+.need-right-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.need-right-button a {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+.need-right-button a svg {
+  margin-left: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .Needs-main {
+    max-width: 1140px;
+  }
+}
