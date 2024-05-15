@@ -1,0 +1,114 @@
+.Blog {
+  background-color: #00678612;
+  padding: 5rem 0rem 0 0;
+  width: 100%;
+  position: relative;
+}
+
+.Blog-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* z-index: 2; */
+  position: relative;
+}
+
+.home-blogs h2 {
+  color: black;
+  font-family: "Ruluko", Sans-serif;
+  font-size: 31px;
+  font-weight: 600;
+  margin: 10px 0 20px 0;
+}
+.home-blogs p {
+  text-align: justify;
+  color: black;
+  font-family: "Ruluko", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.home-blogs .home-blog-box .blog-box-item{
+  margin: 10px;
+}
+.home-blogs .home-blog-box .blog-box-item h4 {
+  text-align: left;
+  color: black;
+  font-family: "Ruluko", Sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: none;
+  margin-bottom: 15px;
+}
+.home-blogs .home-blog-box .blog-box-item img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.home-blogs .home-blog-box .blog-box-item p {
+  color: rgb(63, 63, 63);
+  font-size: 15px;
+  margin: 0;
+  margin-top: 8px;
+}
+.home-blogs .home-blog-box .blog-box-item a {
+  text-decoration: none;
+}
+.home-blogs .home-blog-box .blog-box-item .blog-box-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.home-blogs .home-blog-box .blog-box-item .blog-box-button a {
+  text-decoration: none;
+  background-color: #f4e08e;
+  color: black;
+  border-radius: 8px;
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.home-blog-box .owl-nav button {
+    background-color: white !important;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px !important;
+  }
+  .home-blog-box .owl-nav button.owl-prev {
+    position: absolute;
+    top: 50%;
+    left: -4%;
+  }
+  .home-blog-box .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    right: -4%;
+  }
+
+@media (min-width: 1200px) {
+  .Blog-main {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  
+
+  .home-blogs .home-blog-box .blog-box-item .blog-box-button a {
+    width: 100%;
+  }
+}

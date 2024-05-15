@@ -28,6 +28,7 @@
 
 .hClient-heading {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -69,6 +70,7 @@
 }
 
 .hclients-card {
+  height: 100%;
   color: black;
   margin: 10px;
   background-color: white;
@@ -97,5 +99,11 @@
 @media (min-width: 1200px) {
   .HClients-main {
     max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .hClient-head{
+    width: 100%;
   }
 }

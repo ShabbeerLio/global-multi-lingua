@@ -7,8 +7,10 @@ import ChooseUs from '../../Components/ChooseUs/ChooseUs'
 import Needs from '../../Components/Needs/Needs'
 import Wave from '../../Components/Wave/Wave'
 import PresClients from '../../Components/PresClients/PresClients'
+import Blog from '../../Components/Blog/Blog'
 
 const Home = () => {
+  
   return (
     <div className='Home'>
       <Banner/>
@@ -18,6 +20,7 @@ const Home = () => {
       <Needs/>
       <PresClients/>
       <HClients/>
+      <Blog/>
       <Wave/>
     </div>
   )

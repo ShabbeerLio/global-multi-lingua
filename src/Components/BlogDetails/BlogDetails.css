@@ -1,0 +1,13 @@
+.blog-banner img{
+    width: 100%;
+   }
+   
+   .blog-detail-detail span{
+       color: #b98f4b;
+       font-size: 14px;
+   }
+
+   .blogdetail-head{
+    text-align: center;
+    margin: 2rem 0;
+   }

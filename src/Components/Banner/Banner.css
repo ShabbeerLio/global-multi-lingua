@@ -1,62 +1,75 @@
 .banner {
-  padding: 3rem 0rem;
   width: 100%;
-  background-image: url(../../Assets/Banner/banner-new.avif);
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
   margin-top: 80px;
   position: relative;
 }
-.banner:after {
+.banner img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+.banner-image:after {
   content: "";
   position: absolute;
   top: 0%;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   left: 0;
   display: inline-block;
   opacity: 0.9;
   background-image: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.856) 100%);
 }
 
+.banner-main-box {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
 .banner-main {
   width: 100%;
+  height: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.banner-box{
+.banner-box {
+  height: 100%;
   display: flex;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
 }
 
-.banner-left{
+.banner-left {
   width: 50%;
   z-index: 1;
 }
-.banner-left h1{
+
+.banner-left-2{
+  margin: 0 20px;
+}
+.banner-left h1 {
   font-size: 60px;
   font-weight: 700;
   color: white;
   margin-bottom: 2rem;
 }
-.banner-left p{
+.banner-left p {
   font-size: 18px;
   color: white;
 }
 
-.banner-button{
+.banner-button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.banner-button a{
+.banner-button a {
   border: 1px solid white;
   border-radius: 8px;
   padding: 12px 24px;
@@ -64,47 +77,47 @@
   text-decoration: none;
   margin-top: 2rem;
 }
-.banner-button a svg{
+.banner-button a svg {
   margin-left: 1rem;
 }
 
-.banner-right{
+.banner-right {
   width: 50%;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.banner-right-box{
+.banner-right-box {
   width: 80%;
-    background-color:rgb(219 207 115 / 50%) ;
-    padding: 2rem;
-    border-radius: 8px;
+  background-color: rgb(219 207 115 / 50%);
+  padding: 2rem;
+  border-radius: 8px;
 }
 
-.form-heading h2{
- font-size: 30px;
- font-weight: 600;
- color: #F4E08E;
- margin-bottom: 1rem;
+.form-heading h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #f4e08e;
+  margin-bottom: 1rem;
 }
-.form-heading p{
- font-size: 16px;
- color: white;
- margin-bottom: 1rem;
+.form-heading p {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 1rem;
 }
 
-.banner-right-box form{
+.banner-right-box form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.banner-right-box form select{
+.banner-right-box form select {
   border-radius: 8px;
   border: none;
   padding: 15px;
 }
-.banner-right-box form input{
+.banner-right-box form input {
   border-radius: 8px;
   border: none;
   padding: 15px;
@@ -119,7 +132,7 @@
 }
 
 .banner-right-box form button {
-  background-color: #F4E08E;
+  background-color: #f4e08e;
   color: black;
   padding: 15px;
   border: none;
@@ -128,7 +141,7 @@
   font-size: 14px;
 }
 .banner-right-box form button:hover {
-  background-color: #F4E08E;
+  background-color: #f4e08e;
   color: black;
   border: none;
 }
@@ -136,5 +149,74 @@
 @media (min-width: 1200px) {
   .banner-main {
     max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .banner-box {
+    flex-wrap: wrap;
+  }
+  .banner img {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+  }
+  .banner-image:after {
+    height: 55vh;
+    background-image: linear-gradient(
+      0deg,
+      #00000063 0%,
+      rgba(0, 0, 0, 0.199) 100%
+    );
+  }
+
+  .banner-left,
+  .banner-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner-main-box {
+    position: relative;
+    height: 100%;
+  }
+
+  .banner-left h1 {
+    color: black;
+    font-size: 30px;
+    margin: 15px 0;
+  }
+
+  .banner-left p {
+    color: black;
+    margin-bottom: 15px;
+  }
+
+  .banner-button {
+    justify-content: center;
+  }
+
+  .banner-button a {
+    border: 1px solid black;
+    color: black;
+    margin: 0;
+  }
+
+  .banner-right-box {
+    width: 100%;
+    background-color: #f4e08e;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .form-heading h2,
+  .form-heading p {
+    color: black;
+  }
+
+  .banner-right-box form button {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
   }
 }

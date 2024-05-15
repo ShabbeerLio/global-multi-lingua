@@ -3,6 +3,9 @@ import "./HClients.css"
 import ReactOwlCarousel from 'react-owl-carousel'
 import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from "react-icons/fa6";
+import client1 from "../../Assets/Clients/client1.jpg"
+import client2 from "../../Assets/Clients/client2.jpg"
+import client3 from "../../Assets/Clients/client3.jpg"
 
 const HClients = () => {
 
@@ -36,7 +39,7 @@ const HClients = () => {
                         <ReactOwlCarousel
                             items={3}
                             nav={false}
-                            // loop={true}
+                            loop={true}
                             autoplay={{
                                 delay: 1500,
                                 disableOnInteraction: false,
@@ -45,32 +48,32 @@ const HClients = () => {
                             responsive={responsiveOptions}
                         >
                             <div className="hclients-card">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium cum corrupti magnam? Porro doloribus praesentium earum, deleniti quod illum saepe similique blanditiis alias laboriosam ratione nobis repellendus enim eligendi magnam animi hic. Voluptate quaerat velit ab, odio vitae magni laborum illo laudantium excepturi. Qui, facilis! Magni cumque neque ut assumenda.</p>
+                                <p> " I strongly recommend Global Multilingua Services as they are talented and diligent people to work with. I found them to be very driven, results -oriented, and professional."</p>
                                 <div className="hclients-head">
-                                    <img src="https://static.vecteezy.com/system/resources/previews/003/152/807/large_2x/portrait-of-young-man-with-glasses-on-a-black-background-free-photo.jpg" alt="" />
+                                    <img src={client1} alt="" />
                                     <div className="hclient-head-profile">
-                                        <h4>name</h4>
-                                        <p>Position</p>
+                                        <h4>Neeru Kaushik</h4>
+                                        <p>Sr. Mgr, Maruti Suzuki</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="hclients-card">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium cum corrupti magnam? Porro doloribus praesentium earum, deleniti quod illum saepe similique blanditiis alias laboriosam ratione nobis repellendus enim eligendi magnam animi hic. Voluptate quaerat velit ab, odio vitae magni laborum illo laudantium excepturi. Qui, facilis! Magni cumque neque ut assumenda.</p>
+                                <p> I do feel like you strive for a good fit for employer and  employee. Many firms just place someone, anyone, collect a fee and move on. You  put more thought into the big picture than most.</p>
                                 <div className="hclients-head">
-                                    <img src="https://static.vecteezy.com/system/resources/previews/003/152/807/large_2x/portrait-of-young-man-with-glasses-on-a-black-background-free-photo.jpg" alt="" />
+                                    <img src={client2} alt="" />
                                     <div className="hclient-head-profile">
-                                        <h4>name</h4>
-                                        <p>Position</p>
+                                        <h4>MP Nagrath</h4>
+                                        <p>CMD, JBM Group</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="hclients-card">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium cum corrupti magnam? Porro doloribus praesentium earum, deleniti quod illum saepe similique blanditiis alias laboriosam ratione nobis repellendus enim eligendi magnam animi hic. Voluptate quaerat velit ab, odio vitae magni laborum illo laudantium excepturi. Qui, facilis! Magni cumque neque ut assumenda.</p>
+                                <p> My experience in working with Global Multilingua Services  has been nothing shy of professional. They are attentive to all clients’ needs  and wants. I would recommend GMLS and its team to anyone in search of a new  position.</p>
                                 <div className="hclients-head">
-                                    <img src="https://static.vecteezy.com/system/resources/previews/003/152/807/large_2x/portrait-of-young-man-with-glasses-on-a-black-background-free-photo.jpg" alt="" />
+                                    <img src={client3} alt="" />
                                     <div className="hclient-head-profile">
-                                        <h4>name</h4>
-                                        <p>Position</p>
+                                        <h4>Takashi Shinto</h4>
+                                        <p>GM, Denso</p>
                                     </div>
                                 </div>
                             </div>

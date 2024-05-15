@@ -282,9 +282,10 @@
 }
 
 .fix-icon-enquery p {
-  background-color: #283664;
+  background-color: #f4e08e;
   padding: 12px 24px;
-  color: white;
+  color: black;
+  border: 1px solid rgb(146, 146, 146);
   border-radius: 8px;
   margin: 0;
   cursor: pointer;
@@ -292,7 +293,7 @@
   transition: 0.3s ease-in-out;
 }
 .fix-icon-enquery p:hover {
-  background-color: #1b2267;
+  background-color: #ffdf5d;
   color: black;
 }
 
