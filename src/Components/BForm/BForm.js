@@ -22,7 +22,6 @@ const BForm = () => {
                 <option value="Service 3">Service 3</option>
             </select>
             <input
-
                 name="user_number"
                 type="number"
                 className="form-control"
