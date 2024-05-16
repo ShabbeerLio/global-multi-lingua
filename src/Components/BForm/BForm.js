@@ -1,9 +1,10 @@
 import React from 'react'
+import "./BForm.css"
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const BForm = () => {
     return (
-        <form action="">
+        <form className="formbox" action="">
             <select name="form_fields[name]" id="form-field-name" class="elementor-field-textual elementor-size-sm" required="required" aria-required="true">
                 <option value="Translate From">Translate From</option>
                 <option value="Indonesian">Indonesian</option>

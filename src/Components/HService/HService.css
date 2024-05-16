@@ -1,115 +1,79 @@
 .HService {
-    padding: 5rem 0rem;
-    width: 100%;
-    /* background-color: #00678612; */
-  }
-  
+  padding: 5rem 0rem;
+  width: 100%;
+  /* background-color: #00678612; */
+}
+
+.HService-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hService-heading {
+  text-align: center;
+}
+.hService-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 3rem;
+}
+
+.hservice-card {
+  text-align: center;
+  border-bottom: 1px solid rgb(209, 209, 209);
+  border-right: 1px solid rgb(209, 209, 209);
+  padding: 2rem 10px;
+  cursor: pointer;
+}
+.hservice-card h4{
+  font-size: 16px;
+}
+.hservice-card:hover {
+  background-color: #f1f1f1;
+}
+
+.hservice-card:nth-child(n + 6) {
+  border-bottom: none;
+}
+
+.hservice-card:nth-child(5),
+.hservice-card:nth-child(10) {
+  border-right: none;
+}
+
+.hsrevices-image img {
+  width: 30%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  aspect-ratio: 2/2;
+}
+
+@media (min-width: 1200px) {
   .HService-main {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 1140px;
   }
+}
 
-  .hService-heading{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  .hService-heading h2{
-    font-size: 40px;
-    color: black;
-    margin-bottom: 1rem;
-  }
-  .hService-heading p{
-    font-size: 14px;
-    width: 70%;
-    color: black;
-  }
-
-  /* .hService-box{
+@media only screen and (max-width: 540px) {
+  .hService-box {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
-  } */
-
-  .hservice-card{
-    margin: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hservice-card:hover h4{
-    bottom: 12%;
-  }
-  .hservice-card:hover .hservice-button{
-    bottom: 0;
-  }
-  .hservice-card h4{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 25px;
-    color: white;
-    padding: 1rem;
-    margin: 0;
-    transition: all 0.3s ease-in-out;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
   }
 
-  .hsrevices-image img{
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-    border-radius: 8px;
+  .hservice-card:nth-child(n + 6) {
+    border-bottom: 1px solid rgb(209, 209, 209);
   }
-  .hsrevices-image:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    left: 0;
-    display: inline-block;
-    opacity: 0.9;
-    background-image: linear-gradient(0deg, #000 0%, rgba(255, 255, 255, 0) 100%);
+  .hservice-card:nth-child(even) {
+    border-right: none;
   }
-
-  
-  .hservice-button{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    bottom: -30%;
-    transition: all 0.3s ease-in-out;
+  .hservice-card:nth-child(5) {
+    border-right: 1px solid rgb(209, 209, 209);
   }
-  .hservice-button a{
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    margin: 1rem;
-    color: white;
-    font-size: 14px;
+  .hservice-card:nth-child(n + 9) {
+    border-bottom: none;
   }
-  .hservice-button a svg{
-    color: yellow;
-    font-size: 14px;
-    margin-left: 1rem;
-  }
-
-  @media (min-width: 1200px) {
-    .HService-main {
-      max-width: 1140px;
-    }
-  }
-
-  @media only screen and (max-width: 540px) {
-    .hService-heading h2{
-      font-size: 30px;
-    }
-    .hService-heading p{
-      width: 100%;
-    }
-  }
+}

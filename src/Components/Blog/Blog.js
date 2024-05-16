@@ -50,7 +50,7 @@ const Blog = () => {
                         <div className="hClient-heading">
                             <div className="hClient-head">
                                 <h2>Blogs</h2>
-                                <p>We are expert in language translation & interpretation services in  major languages. We deliver our propmt services in following ares  to our clients in order to make the communication more effective.</p>
+                                {/* <p>We are expert in language translation & interpretation services in  major languages. We deliver our propmt services in following ares  to our clients in order to make the communication more effective.</p> */}
                             </div>
                             <div className="hClient-button">
                                 <Link to={"/blogs"} onClick={scrollToTop}>View More <FaArrowRightLong /></Link>
@@ -70,11 +70,9 @@ const Blog = () => {
                             >
                                 {/* {BlogData.slice(1).reverse().slice(0, 3).map((item) => ( */}
                                 {BlogData.map((item) => (
-                                    <div className="blog-box-item" key={item.pathName}>
-                                        <Link to={{
-                                            pathname: `/blogs/${formatPathname(item.pathName)}/`
-                                        }} onClick={scrollToTop}>
-                                            <img src={item.cover} alt={item.alttag} />
+                                    <div className="blog-box-item" key={""}>
+                                        <Link to={"/"} onClick={scrollToTop}>
+                                            <img src={item.cover} alt={""} />
                                             <div className="blog-card-desc">
                                                 <p>{item.date}</p>
                                                 <h4>{item.title}</h4>
@@ -82,9 +80,7 @@ const Blog = () => {
                                             </div>
                                         </Link>
                                         <div className="blog-box-button">
-                                            <Link to={{
-                                                pathname: `/blogs/${formatPathname(item.pathName)}/`
-                                            }} onClick={scrollToTop}>View More</Link>
+                                            <Link to={"/"} onClick={scrollToTop}>View More</Link>
                                         </div>
                                     </div>
                                 ))}

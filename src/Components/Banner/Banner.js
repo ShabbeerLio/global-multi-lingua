@@ -26,12 +26,14 @@ const Banner = () => {
             <ReactOwlCarousel
                 loop={Infinity}
                 items={1}
-                nav={true}
-                dots={false}
+                nav={false}
+                dots={true}
                 autoplay={true}
                 autoplayTimeout={3000}
                 autoplaySpeed={1000}
                 smartSpeed={1000}
+                // animateOut={'fadeOut'}
+                // animateIn={'fadeIn'}
             >
                 <div className="banner-image">
                     <img src={banner1} alt="" />
@@ -48,7 +50,7 @@ const Banner = () => {
                             <ReactOwlCarousel
                                 loop={Infinity}
                                 items={1}
-                                nav={true}
+                                nav={false}
                                 dots={false}
                                 autoplay={true}
                                 autoplayTimeout={3000}
@@ -56,15 +58,15 @@ const Banner = () => {
                                 smartSpeed={1000}
                             >
                                 <div className="banner-left-2">
-                                    <h1>Professional Translation at Your Finger Tip!</h1>
-                                    <p>Unlocking global communication with expert language translation in Delhi</p>
+                                    <h1>We provide experienced & professional Translators</h1>
+                                    <p>You need to communicate in various languages & cultures , We can assist you in bridging language gap.</p>
                                     <div className="banner-button">
                                         <Link>Our Services <FaArrowRightLong /></Link>
                                     </div>
                                 </div>
                                 <div className="banner-left-2">
-                                    <h1>Professional Translation at Your Finger Tip!</h1>
-                                    <p>Unlocking global communication with expert language translation in Delhi</p>
+                                    <h1>Attestation Services</h1>
+                                    <p>We provide experienced interpreters of major languages. All our  interpreters are  professionally expert and having great fluency in various languages.</p>
                                     <div className="banner-button">
                                         <Link>Our Services <FaArrowRightLong /></Link>
                                     </div>

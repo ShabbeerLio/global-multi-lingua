@@ -2,6 +2,7 @@ import React from 'react'
 import "./FormFloat.css"
 // import Form from '../Form/Form'
 import { IoMdClose } from "react-icons/io";
+import BForm from '../BForm/BForm';
 
 const FormFloat = (props) => {
     return (
@@ -11,7 +12,7 @@ const FormFloat = (props) => {
                     <div className="formfloat-button">
                         <IoMdClose onClick={props.formIsClose} />
                     </div>
-                    {/* <Form /> */}
+                    <BForm />
                 </div>
             </div>
         </div>

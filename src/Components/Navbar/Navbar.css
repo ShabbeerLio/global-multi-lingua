@@ -179,14 +179,14 @@
 
 .navbar-nav .dropdown-menu {
   background-color: white;
-  border-top: 1px solid #1b2267;
+  /* border-top: 1px solid #1b2267; */
   border-radius: 0px;
   /* top: 100%; */
   padding: 0;
 }
 
 .nav-menu ul li a:hover {
-  color: gray !important; 
+  color: #1b2267 !important; 
 }
 
 .dropdown-menu {
