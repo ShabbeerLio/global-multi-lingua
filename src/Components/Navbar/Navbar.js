@@ -65,9 +65,9 @@ const Navbar = (props) => {
                             <div className="company-logo">
                                 <div className="company-logo-box">
                                     <Link
-                                        className={`nav-link ${activeLink === '/' ? 'active' : ''}`}
-                                        to="/"
-                                        onClick={() => handleLinkClick('/')}
+                                        className={`nav-link ${activeLink === '/gmls' ? 'active' : ''}`}
+                                        to="/gmls"
+                                        onClick={() => handleLinkClick('/gmls')}
                                     >
                                         <img src={Logo} alt="" />
                                     </Link>
@@ -92,9 +92,9 @@ const Navbar = (props) => {
                                     <ul className="navbar-nav ml-auto">
                                         <li className="nav-item">
                                             <Link
-                                                className={`nav-link ${activeLink === '/' ? 'active' : ''}`}
-                                                to="/"
-                                                onClick={() => closeMenu('/')}
+                                                className={`nav-link ${activeLink === '/gmls' ? 'active' : ''}`}
+                                                to="/gmls"
+                                                onClick={() => closeMenu('/gmls')}
                                             >
                                                 Home
                                             </Link>
