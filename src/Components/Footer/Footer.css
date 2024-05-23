@@ -2,6 +2,8 @@
   padding: 3rem 0rem 6rem 0rem;
   padding-bottom: 0;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-main,
@@ -51,7 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1b2267;
+  background-color: #673de6;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -73,7 +75,7 @@
 
 .footer-menu h3 {
   font-size: 20px;
-  color: #1b2267;
+  color: #673de6;
 }
 
 .footer-menu h3:after {
@@ -83,7 +85,7 @@
   height: 2px;
   width: 25%;
   border-radius: 50px;
-  background-color: #1b2267;
+  background-color: #673de6;
 }
 
 .footer-menu ul {
@@ -103,7 +105,7 @@
 }
 
 .footer-menu ul li a:hover {
-  color: #1b2267;
+  color: #673de6;
 }
 
 .footer-box2 p {
@@ -133,7 +135,7 @@
   font-size: 14px;
 }
 .footer-box3 ul li a:hover {
-  color: #1b2267;
+  color: #673de6;
 }
 
 .footer-copyright {

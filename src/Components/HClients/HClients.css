@@ -1,5 +1,4 @@
 .HClients {
-  background-color: #00678612;
   padding: 5rem 0rem 0 0;
   width: 100%;
   position: relative;
@@ -52,16 +51,15 @@
     justify-content: center;
 }
 .hClient-button a{
-    background-color: #f4e08e;
+    background-color: #673de6;
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
-    color: black;
+    color: white;
     cursor: pointer;
     transition: .3s ease-in-out;
 }
 .hClient-button a:hover{
-    background-color: #ffb000;
     color: black;
 }
 
@@ -95,6 +93,7 @@
   margin-right: 20px;
   border-radius: 8px;
   aspect-ratio: 2/2;
+  filter: grayscale(1);
 }
 @media (min-width: 1200px) {
   .HClients-main {

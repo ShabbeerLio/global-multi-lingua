@@ -3,11 +3,13 @@
     position: relative;
     rotate: 180deg;
     height: 200px;
+    
   }
   .blog2-wave svg{
     position: absolute;
     bottom: 0%;
+    z-index: 1;
   }
   .blog2-wave svg path{
-    fill: #00678612;
+    fill: #f1f1f1;
   }

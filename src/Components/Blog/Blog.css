@@ -1,5 +1,5 @@
 .Blog {
-  background-color: #00678612;
+  background-color: #f1f1f1;
   padding: 5rem 0rem 0 0;
   width: 100%;
   position: relative;
@@ -49,6 +49,7 @@
   height: 300px;
   margin-bottom: 20px;
   border-radius: 8px;
+  filter: grayscale(1);
 }
 .home-blogs .home-blog-box .blog-box-item p {
   color: rgb(63, 63, 63);
@@ -67,8 +68,8 @@
 }
 .home-blogs .home-blog-box .blog-box-item .blog-box-button a {
   text-decoration: none;
-  background-color: #f4e08e;
-  color: black;
+  background-color: #673de6;
+  color: white;
   border-radius: 8px;
   text-align: center;
   padding: 12px 24px;
@@ -77,27 +78,10 @@
   cursor: pointer;
   transition: all 0.3s;
 }
+.home-blogs .home-blog-box .blog-box-item .blog-box-button a:hover {
+  color: black;
+}
 
-.home-blog-box .owl-nav button {
-    background-color: white !important;
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px !important;
-  }
-  .home-blog-box .owl-nav button.owl-prev {
-    position: absolute;
-    top: 50%;
-    left: -4%;
-  }
-  .home-blog-box .owl-nav button.owl-next {
-    position: absolute;
-    top: 50%;
-    right: -4%;
-  }
 
 @media (min-width: 1200px) {
   .Blog-main {

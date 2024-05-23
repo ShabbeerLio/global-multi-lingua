@@ -1,7 +1,6 @@
 .Needs {
   padding: 5rem 0rem;
   width: 100%;
-  /* background-color: #00678612; */
 }
 
 .Needs-main {
@@ -27,6 +26,7 @@
   object-fit: cover;
   aspect-ratio: 2/2;
   border-radius: 25% 8px 15% 8px;
+  filter: grayscale(1);
 }
 
 .needs-right {
@@ -44,7 +44,7 @@
   margin-bottom: 2rem;
 }
 .needs-right .need-right-box {
-  background-color: #f4e08e;
+  background-color: #876ae0;
   padding: 2rem;
   border-radius: 0 8px 8px 0px;
   position: relative;
@@ -52,7 +52,7 @@
 }
 .needs-right .need-right-box:before {
   content: "";
-  background-color: #f4e08e;
+  background-color: #876ae0;
   padding: 2rem;
   border-radius: 0 8px 0px 20%;
   height: 280px;
@@ -66,14 +66,14 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  color: black;
+  color: white;
   font-weight: 500;
 }
 .needs-right ul {
   padding-left: 0px;
 }
 .needs-right ul li svg {
-  color: black;
+  color: white;
   margin-right: 1rem;
 }
 
@@ -83,11 +83,14 @@
   justify-content: flex-start;
 }
 .need-right-button a {
-  background-color: black;
+  background-color: #673de6;
   text-decoration: none;
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
+}
+.need-right-button a:hover {
+  color: black;
 }
 .need-right-button a svg {
   margin-left: 1rem;

@@ -64,19 +64,20 @@
   margin-bottom: 2rem;
 }
 .chooseusleft-card:first-child {
-  background-color: #f4e08e;
-  color: black;
+  background-color: #673de6;
+  color: white;
 }
 .chooseusleft-card:nth-child(2) {
-  background-color: #004086;
+  background-color: #00678612;
+  color: black;
 }
 .chooseusleft-card:nth-child(3) {
   background-color: #00678612;
   color: black;
 }
 .chooseusleft-card:last-child {
-  background-color: #f4e08e;
-  color: black;
+  background-color: #673de6;
+  color: white;
 }
 
 .chooseus-right {
@@ -87,6 +88,7 @@
   object-fit: cover;
   height: 100%;
   border-radius: 8px 8px 150px 8px;
+  filter: grayscale(1);
 }
 
 @media (min-width: 1200px) {
@@ -127,5 +129,18 @@
 
   .chooseusleft-card {
     aspect-ratio: auto;
+  }
+
+  .chooseusleft-card:first-child {
+    order: 1;
+  }
+  .chooseusleft-card:nth-child(2) {
+    order: 2;
+  }
+  .chooseusleft-card:nth-child(3) {
+    order: 4;
+  }
+  .chooseusleft-card:last-child {
+    order: 3;
   }
 }

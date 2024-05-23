@@ -157,19 +157,19 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
-  background-color: #F4E08E;
+  background-color: #673de6;
+  color: white;
   border-radius: 5px;
   margin-left: 20px;
   transition: .3s ease-in-out;
 }
-.call-button p:hover {
-  background-color: #ffb000;
+.call-button p:hover a{
   color: black;
 }
 
 .call-button p a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .call-button p a svg {
@@ -254,7 +254,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffb000;
+  background-color: #673de6;
   margin-bottom: 8px;
   z-index: 1;
 }
@@ -266,7 +266,7 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: #ffb000;
+  background-color: #673de6;
   animation: shine 2s infinite;
   z-index: -1;
 }
@@ -282,9 +282,9 @@
 }
 
 .fix-icon-enquery p {
-  background-color: #f4e08e;
+  background-color: #673de6;
   padding: 12px 24px;
-  color: black;
+  color: white;
   border: 1px solid rgb(146, 146, 146);
   border-radius: 8px;
   margin: 0;
@@ -293,7 +293,7 @@
   transition: 0.3s ease-in-out;
 }
 .fix-icon-enquery p:hover {
-  background-color: #ffdf5d;
+  background-color: #673de6;
   color: black;
 }
 
