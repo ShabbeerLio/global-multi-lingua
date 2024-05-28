@@ -1,0 +1,116 @@
+.Services {
+  padding: 6rem 0rem;
+  width: 100%;
+  /* background-color: #f1f1f1; */
+  border-bottom: 1px solid #cecece;
+}
+
+.Services-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+}
+
+.Services-main h1 {
+  margin-bottom: 2rem;
+}
+.Services-main h1:after {
+  content: "";
+  margin-top: 2px;
+  display: flex;
+  height: 2px;
+  width: 50%;
+  border-radius: 50px;
+  background-color: #673de6;
+}
+
+.Services-box {
+  display: flex;
+  gap: 2rem;
+}
+
+.Services-left {
+  width: 70%;
+}
+.Services-left p {
+  color: #767676;
+  text-align: justify;
+}
+.Services-left h5 {
+  color: #673de6;
+  padding-bottom: 10px;
+}
+.Services-left h5:after {
+  content: "";
+  margin-top: 2px;
+  display: flex;
+  height: 2px;
+  width: 35%;
+  border-radius: 50px;
+  background-color: #673de6;
+}
+
+.Services-right {
+  width: 30%;
+}
+
+.ServicesRight img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.ServicesRight h4:after {
+  content: "";
+  margin-top: 2px;
+  display: flex;
+  height: 2px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #673de6;
+}
+
+.ServicesRight span {
+  color: #673de6;
+  font-weight: 500;
+}
+
+.serviceright-box ul {
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+}
+
+.serviceright-box ul li a{
+  color: black;
+  text-decoration: none;
+}
+
+.serviceright-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceright-box{
+    margin-top: 1rem;
+}
+.serviceright-button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #673de6;
+    border-radius: 8px;
+    padding: 10px 20px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .Services-main {
+    max-width: 1140px;
+  }
+}

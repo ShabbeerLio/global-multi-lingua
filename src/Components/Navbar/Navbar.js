@@ -101,9 +101,9 @@ const Navbar = (props) => {
                                         </li>
                                         <li className="nav-item">
                                             <Link
-                                                className={`nav-link ${activeLink === '/about' ? 'active' : ''}`}
-                                                to="/about"
-                                                onClick={() => closeMenu('/about')}
+                                                className={`nav-link ${activeLink === '/gmls/about' ? 'active' : ''}`}
+                                                to="/gmls/about"
+                                                onClick={() => closeMenu('/gmls/about')}
                                             >About</Link>
                                         </li>
                                         <li className="nav-item dropdown">
@@ -114,15 +114,12 @@ const Navbar = (props) => {
                                                 aria-expanded="false">
                                                 Services
                                             </Link>
-                                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><Link className={`dropdown-item ${activeLink === '/translation-services' ? 'active' : ''}`} to="/translation-services" onClick={() => closeMenu('/translation-services')}>Translation Services</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/interpretation-services' ? 'active' : ''}`} to="/interpretation-services" onClick={() => closeMenu('/interpretation-services')}>Interpretation Services</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/transcription-services' ? 'active' : ''}`} to="/transcription-services" onClick={() => closeMenu('/transcription-services')}>Transcription Services</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/simultaneous-equipment' ? 'active' : ''}`} to="/simultaneous-equipment" onClick={() => closeMenu('/simultaneous-equipment')}>Simultaneous Equipment</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/placement-&-consulting' ? 'active' : ''}`} to="/placement-&-consulting" onClick={() => closeMenu('/placement-&-consulting')}>Placement & Consulting</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/corporate-training' ? 'active' : ''}`} to="/corporate-training" onClick={() => closeMenu('/corporate-training')}>Corporate Training</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/apostille-services' ? 'active' : ''}`} to="/apostille-services" onClick={() => closeMenu('/apostille-services')}>Apostille Services</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/market-research' ? 'active' : ''}`} to="/market-research" onClick={() => closeMenu('/market-research')}>Market Research</Link></li>
+                                            <ul className="dropdown-menu" aria-labelledby="navbarDropdogmls/wn">
+                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/translation-services' ? 'active' : ''}`} to="/gmls/translation-services" onClick={() => closeMenu('/gmls/translation-services')}>Translation Services</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/interpretation-services' ? 'active' : ''}`} to="/gmls/interpretation-services" onClick={() => closeMenu('/gmls/interpretation-services')}>Interpretation Services</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/transcription-services' ? 'active' : ''}`} to="/gmls/transcription-services" onClick={() => closeMenu('/gmls/transcription-services')}>Transcription Services</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/apostille-services' ? 'active' : ''}`} to="/gmls/apostille-services" onClick={() => closeMenu('/gmls/apostille-services')}>Apostille Services</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/simultaneous-equipment' ? 'active' : ''}`} to="/gmls/simultaneous-equipment" onClick={() => closeMenu('/gmls/simultaneous-equipment')}>Simultaneous Equipment</Link></li>
                                             </ul>
                                         </li>
                                         <li className="nav-item dropdown">

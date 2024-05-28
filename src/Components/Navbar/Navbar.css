@@ -320,6 +320,13 @@
   }
 }
 
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #673de6;
+}
+
 @media screen and (min-width: 1200px) {
   /* .nav-menu {
     max-width: 1140px;
