@@ -131,36 +131,36 @@ const Navbar = (props) => {
                                                 Languages
                                             </Link>
                                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><Link className={`dropdown-item ${activeLink === '/european-languages' ? 'active' : ''}`} to="/european-languages" onClick={() => closeMenu('/european-languages')}>European Languages</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/asian-languages' ? 'active' : ''}`} to="/asian-languages" onClick={() => closeMenu('/asian-languages')}>Asian Languages</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/indian-languages' ? 'active' : ''}`} to="/indian-languages" onClick={() => closeMenu('/indian-languages')}>Indian Languages</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/european-languages' ? 'active' : ''}`} to="/gmls/european-languages" onClick={() => closeMenu('/gmls/european-languages')}>European Languages</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/asian-languages' ? 'active' : ''}`} to="/gmls/asian-languages" onClick={() => closeMenu('/gmls/asian-languages')}>Asian Languages</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/indian-languages' ? 'active' : ''}`} to="/gmls/indian-languages" onClick={() => closeMenu('/gmls/indian-languages')}>Indian Languages</Link></li>
                                             </ul>
                                         </li>
                                         <li className="nav-item">
                                             <Link
                                                 className={`nav-link ${activeLink === '/industry' ? 'active' : ''}`}
-                                                to="/industry"
+                                                to="/gmls/industry"
                                                 onClick={() => closeMenu('/industry')}
                                             >Industry</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link
                                                 className={`nav-link ${activeLink === '/clients' ? 'active' : ''}`}
-                                                to="/clients"
+                                                to="/gmls/clients"
                                                 onClick={() => closeMenu('/clients')}
                                             >Clients</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link
                                                 className={`nav-link ${activeLink === '/blogs' ? 'active' : ''}`}
-                                                to="/blogs"
+                                                to="/gmls/blogs"
                                                 onClick={() => closeMenu('/blogs')}
                                             >Blog</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link
                                                 className={`nav-link ${activeLink === '/contact' ? 'active' : ''}`}
-                                                to="/contact"
+                                                to="/gmls/contact"
                                                 onClick={() => closeMenu('/contact')}
                                             >Contact Us</Link>
                                         </li>

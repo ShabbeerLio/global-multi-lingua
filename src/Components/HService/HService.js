@@ -6,6 +6,13 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const HService = () => {
 
+    const scroll = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+        });
+    }
+
     return (
         <div className='HService'>
             <div className='HService-main'>
@@ -14,14 +21,17 @@ const HService = () => {
                     <p>We are expert in language translation & interpretation services in  major languages. We deliver our propmt services in following ares  to our clients in order to make the communication more effective.</p>
                 </div>
                 <div className="hService-box">
-                        {HServicesData.map((item) => (
-                            <div className="hservice-card">
-                                <div className="hsrevices-image">
-                                    <img src={item.cover} alt="" />
-                                </div>
-                                <h4>{item.title}</h4>
+                    {HServicesData.map((item) => (
+                        <div className="hservice-card">
+                            <div className="hsrevices-image">
+                                <img src={item.cover} alt="" />
                             </div>
-                        ))}
+                            <h4>{item.title}</h4>
+                        </div>
+                    ))}
+                </div>
+                <div className="hServices-button">
+                    <Link to={"/gmls/services"} onClick={scroll}>View More</Link>
                 </div>
             </div>
         </div>
