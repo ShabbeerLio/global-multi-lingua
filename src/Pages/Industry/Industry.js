@@ -6,6 +6,7 @@ const Industry = () => {
 
     return (
         <div className='Industry'>
+            <img src="https://static.vecteezy.com/system/resources/previews/038/502/788/non_2x/ai-generated-businessman-looking-at-machinery-in-an-industry-factory-free-photo.jpg" alt="" />
             <div className='Industry-main'>
                 <h1>Industry</h1>
                 <p>A brief explanation why customers from different industries have hired us for Translations and Interpretation.</p>

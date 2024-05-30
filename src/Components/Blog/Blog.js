@@ -70,7 +70,7 @@ const Blog = () => {
                             >
                                 {/* {BlogData.slice(1).reverse().slice(0, 3).map((item) => ( */}
                                 {BlogData.map((item) => (
-                                    <div className="blog-box-item" key={""}>
+                                    <div className="blog-box-item" key={item.id}>
                                         <Link to={"/"} onClick={scrollToTop}>
                                             <img src={item.cover} alt={""} />
                                             <div className="blog-card-desc">

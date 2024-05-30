@@ -1,0 +1,125 @@
+.Contact {
+  padding: 6rem 0rem;
+  width: 100%;
+  border-bottom: 1px solid #cecece;
+}
+
+.Contact-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Contact-main h1 {
+  margin-bottom: 2rem;
+}
+.Contact-main h1:after {
+  content: "";
+  margin-top: 2px;
+  display: flex;
+  height: 2px;
+  width: 15%;
+  border-radius: 50px;
+  background-color: #673de6;
+}
+
+.Contact-box {
+  display: flex;
+  gap: 2rem;
+}
+
+.Contactbox-left {
+  width: 60%;
+  background-color: #00678612;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Contactbox-left p {
+  margin: 0;
+}
+.contactdetail-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  color: white;
+}
+
+.ukrain-office {
+  margin: 2rem 0rem;
+  text-align: center;
+}
+
+.Contactbox-right {
+  width: 40%;
+  background-color: #673de6;
+  /* background-color: #00678612; */
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-detail-card {
+  background-color: #673de6;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.contact-detail-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-detail-card svg {
+  font-size: 50px;
+  margin-right: 1rem;
+}
+
+.contactcard-detail h6:after {
+  content: "";
+  margin-top: 2px;
+  display: flex;
+  height: 2px;
+  width: 25%;
+  border-radius: 50px;
+  background-color: white;
+}
+
+@media (min-width: 1200px) {
+  .Contact-main {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+
+  .Contactbox-left ,
+  .Contactbox-right {
+    width: 100%;
+  }
+  
+  .Contactbox-left p {
+    text-align: center;
+  }
+
+  .Contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .contactdetail-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    color: white;
+  }
+}

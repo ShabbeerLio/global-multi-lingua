@@ -6,6 +6,7 @@ import languages from './ServiceData'
 const Apostille = () => {
     return (
         <div className='Services'>
+            <img src="https://static.vecteezy.com/system/resources/previews/009/311/650/non_2x/business-people-and-lawyers-discussing-contract-papers-legal-planning-concepts-of-law-advice-legal-services-free-photo.jpg" alt="" />
             <div className='Services-main'>
                 <div className='Services-box'>
                     <div className='Services-left'>
@@ -13,7 +14,7 @@ const Apostille = () => {
                         <p>We have been assiating corporate customers for a long time through our apostille services in Delhi. On behalf of our quality work, we have got an remarkable image in industry. we generally welcomes documents from representatives on behalf of MEA and Embassy of US to offer quite and fair apostille service.</p>
                     </div>
                     <div className='Services-right'>
-                        <ServicesRight title={"Translators"} languages={languages} display={"grid"}/>
+                        <ServicesRight title={"Translators"} languages={languages} display={"grid"} />
                     </div>
                 </div>
             </div>

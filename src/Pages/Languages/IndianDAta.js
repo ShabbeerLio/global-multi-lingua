@@ -1,84 +1,35 @@
-const IndianData =[
+const IndianData = [
     {
-        id:1,
-        name:"Asamese"
+        id: 1,
+        name: "Asamese",
+        description: "lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
-        id:2,
-        name:"Kannada"
+        id: 2,
+        name: "Kannada",
+        description: "lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
-        id:3,
-        name:"Manipuri"
+        id: 3,
+        name: "Manipuri",
+        description: "lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
-        id:4,
-        name:"Sanskrit"
+        id: 4,
+        name: "Sanskrit",
+        description: "lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
-        id:5,
-        name:"Urdu"
+        id: 5,
+        name: "Urdu",
+        description: "lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
-        id:6,
-        name:"Bodo"
+        id: 6,
+        name: "Bodo",
+        description: "lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
-    {
-        id:6,
-        name:"Bodo"
-    },
+
 ]
 
 export default IndianData;

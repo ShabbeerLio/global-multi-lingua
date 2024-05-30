@@ -1,27 +1,33 @@
 const EuropianData =[
     {
         id:1,
-        name:"Azerbaijan"
+        name:"Azerbaijan",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:2,
-        name:"Czech"
+        name:"Czech",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:3,
-        name:"French"
+        name:"French",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:4,
-        name:"Hungarian"
+        name:"Hungarian",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:5,
-        name:"Portuguese"
+        name:"Portuguese",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:6,
-        name:"Slovak"
+        name:"Slovak",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
 ]
 

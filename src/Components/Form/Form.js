@@ -65,7 +65,6 @@ const Form = () => {
 
     return (
         <>
-            <h4>Get Your Translation Now</h4>
             {messageSent ? (
                 <div className='form-message'>
                     <p>Message sent successfully!</p>
@@ -116,7 +115,7 @@ const Form = () => {
                         />
                     </div>
                     <button type="submit" className="btn btn-primary">
-                        Proceed Now
+                        Send Now
                     </button>
                 </form>
             )}

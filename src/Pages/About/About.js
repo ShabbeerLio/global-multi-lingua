@@ -5,9 +5,9 @@ import aboutimg from "../../Assets/about/person.png"
 const About = () => {
   return (
     <div className='about'>
+          <img src="https://static.vecteezy.com/system/resources/previews/027/187/311/large_2x/arab-man-confidently-points-towards-copy-space-on-yellow-background-for-designers-to-add-text-or-logos-free-photo.jpg" alt="" />
       <div className='about-main'>
         <div className="about-left">
-          <img src={aboutimg} alt="" />
         </div>
         <div className="about-right">
           <h1>About Us</h1>

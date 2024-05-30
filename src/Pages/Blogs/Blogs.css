@@ -1,6 +1,7 @@
 .blog {
   margin-top: 70px;
   /* background-color: #111111; */
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .blog-box {
@@ -8,27 +9,28 @@
   /* background-color: #111111; */
 }
 .blog-box2 {
-  padding: 20px 0px;
+  padding: 2rem 0px 4rem 0rem;
   /* background-color: #111111; */
 }
 
 /* Banner */
 
 .blog-banner img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-    filter: brightness(40%);
-  }
-
-.hotel-detail-box{
-    position: relative;
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+  filter: brightness(40%);
 }
 
-.blog-banner-right-box{
-    position: absolute;
-    right: 10%;
-    bottom: 5%;
+.hotel-detail-box {
+  position: relative;
+  margin-top: 80px;
+}
+
+.blog-banner-right-box {
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
 }
 
 .blog-item {
@@ -48,15 +50,17 @@
   margin-left: auto;
 }
 
-
-
 .blog-head h1 {
-  text-align: center;
   color: black;
-  font-size: 31px;
-  font-weight: 600;
-  text-transform: uppercase;
-  /* margin-top: 50px; */
+}
+.blog-head h1:after {
+  content: "";
+  margin-top: 2px;
+  display: flex;
+  height: 2px;
+  width: 10%;
+  border-radius: 50px;
+  background-color: #673de6;
 }
 
 .blog-overview {
@@ -86,6 +90,7 @@
 
 .blog-body-image img {
   width: 100%;
+  filter: grayscale();
 }
 
 .blog-body h4 {
@@ -128,18 +133,16 @@
 }
 .blog-overview .blog-body-left .body-left-button a {
   text-decoration: none;
-  background-color: #f4e08e;
-  color: black;
-  border-radius: 3px;
+  background-color: #673de6;
+  color: white;
+  border-radius: 8px;
   text-align: center;
-  padding: 12px 24px;
-  font-size: 15px;
-  line-height: 1;
+  padding: 10px 20px;
   cursor: pointer;
   transition: all 0.3s;
 }
 .blog-overview .blog-body-left .body-left-button a:hover {
-  background-color: black;
+  color: black;
 }
 
 .blog-body-right {
@@ -150,6 +153,7 @@
   width: 100%;
   height: 70vh;
   object-fit: cover;
+  filter: grayscale();
 }
 
 .blogs-items-card a {
@@ -160,16 +164,17 @@
   text-decoration: none;
 }
 .blogs-items-card a:hover {
-  background-color: #f4e08e;
+  background-color: #673de6;
 }
 .blogs-items-card a:hover h6,
 .blogs-items-card a:hover p {
-  color: black;
+  color: white;
 }
 .blogs-items-card img {
   width: 25%;
   object-fit: cover;
   height: 60px;
+  filter: grayscale();
 }
 
 .blog-card-desc h6 {
@@ -201,6 +206,14 @@
 
   .blog-body-right {
     width: 100%;
+  }
+
+  .blog-body h4 {
+    text-align: center;
+  }
+
+  .blog-body-detail {
+    padding: 20px;
   }
 
   .blog-body {

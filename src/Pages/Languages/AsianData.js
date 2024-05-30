@@ -1,27 +1,33 @@
 const AsianData =[
     {
         id:1,
-        name:"Arabic"
+        name:"Arabic",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:2,
-        name:"Burmese"
+        name:"Burmese",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:3,
-        name:"Farsi"
+        name:"Farsi",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:4,
-        name:"Kyrgyz"
+        name:"Kyrgyz",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:5,
-        name:"Persian"
+        name:"Persian",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
     {
         id:6,
-        name:"Thai"
+        name:"Thai",
+        description:"lorem mdvkosvhokjsnd fsd jhdvin odsan"
     },
 ]
 

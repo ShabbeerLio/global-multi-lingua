@@ -1,13 +1,15 @@
-.blog-banner img{
-    width: 100%;
-   }
-   
-   .blog-detail-detail span{
-       color: #b98f4b;
-       font-size: 14px;
-   }
+.HotelDetail{
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
 
-   .blogdetail-head{
-    text-align: center;
-    margin: 2rem 0;
-   }
+.blog-banner img {
+  width: 100%;
+  filter: grayscale();
+}
+
+
+
+.blogdetail-head {
+  text-align: center;
+  margin: 2rem 0;
+}

@@ -6,6 +6,7 @@ import languages from './ServiceData'
 const Interpretation = () => {
     return (
         <div className='Services'>
+                        <img src="https://static.vecteezy.com/system/resources/previews/009/311/650/non_2x/business-people-and-lawyers-discussing-contract-papers-legal-planning-concepts-of-law-advice-legal-services-free-photo.jpg" alt="" />
             <div className='Services-main'>
                 <div className='Services-box'>
                     <div className='Services-left'>
@@ -41,7 +42,7 @@ const Interpretation = () => {
                         <p>All of  our professional Russian Interpreters in Delhi are well qualified and have strong  grip on the domain of Russian interpretation services. They all have been well trained  of Russian -to-English and English-to- Russian Translation.  All team members of Russian interpretation services in  Delhi are recruited to meet the exact requirements of clients. </p>
                     </div>
                     <div className='Services-right'>
-                    <ServicesRight title={"Interpreters"} display={"grid"} languages={languages}/>
+                        <ServicesRight title={"Interpreters"} display={"grid"} languages={languages} />
                     </div>
                 </div>
             </div>

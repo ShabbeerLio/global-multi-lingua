@@ -6,6 +6,7 @@ import languages from './ServiceData'
 const Translation = () => {
     return (
         <div className='Services'>
+            <img src="https://static.vecteezy.com/system/resources/previews/009/311/650/non_2x/business-people-and-lawyers-discussing-contract-papers-legal-planning-concepts-of-law-advice-legal-services-free-photo.jpg" alt="" />
             <div className='Services-main'>
                 <div className='Services-box'>
                     <div className='Services-left'>

@@ -22,7 +22,7 @@ const HService = () => {
                 </div>
                 <div className="hService-box">
                     {HServicesData.map((item) => (
-                        <div className="hservice-card">
+                        <div className="hservice-card" key={item.id}>
                             <div className="hsrevices-image">
                                 <img src={item.cover} alt="" />
                             </div>

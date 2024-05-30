@@ -1,8 +1,7 @@
 import React from 'react'
 import "./PresClients.css"
 import ReactOwlCarousel from 'react-owl-carousel'
-import { Link } from 'react-router-dom';
-import PrestClientData from './PrestClientData';
+import ClientData from '../../Pages/Clients/ClientsData';
 
 const PresClients = () => {
 
@@ -37,8 +36,8 @@ const PresClients = () => {
                         dots={false}
                         responsive={responsiveOptions}
                     >
-                        {PrestClientData.map((item) => (
-                            <div className="presClients-card">
+                        {ClientData.map((item) => (
+                            <div className="presClients-card" key={item.id}>
                                 <div className="presClients-image">
                                     <img src={item.cover} alt="" />
                                 </div>

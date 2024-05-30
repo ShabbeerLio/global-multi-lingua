@@ -48,7 +48,7 @@ const Blogs = ({ title, descriptions }) => {
                         <div className="blog-body-left">
                             <div className="blog-body-image">
                                 <Link to={{
-                                    pathname: `/blogs/${formatPathname(BlogData[BlogData.length - 1].pathName)}/`
+                                    pathname: `/gmls/blogs/${formatPathname(BlogData[BlogData.length - 1].pathName)}/`
                                 }} onClick={scrollToTop} >
                                     <img src={BlogData[BlogData.length - 1].cover} alt={BlogData[BlogData.length - 1].alt} />
                                 </Link>
@@ -59,7 +59,7 @@ const Blogs = ({ title, descriptions }) => {
                                 <p>{BlogData[BlogData.length - 1].desc}</p>
                                 <div className="body-left-button">
                                     <Link to={{
-                                        pathname: `/blogs/${formatPathname(BlogData[BlogData.length - 1].pathName)}/`
+                                        pathname: `/gmls/blogs/${formatPathname(BlogData[BlogData.length - 1].pathName)}/`
                                     }} onClick={scrollToTop}>View More</Link>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@ const Blogs = ({ title, descriptions }) => {
                                 {BlogData.slice().reverse().map((item) => (
                                     <div className="blogs-items-card" key={item.pathName}>
                                         <Link to={{
-                                            pathname: `/blogs/${formatPathname(item.pathName)}/`
+                                            pathname: `/gmls/blogs/${formatPathname(item.pathName)}/`
                                         }} onClick={scrollToTop}>
                                             <img src={item.cover} alt={item.alttag} />
                                             <div className="blog-card-desc">

@@ -6,6 +6,7 @@ import TranscriptionData from './TranscriptionData'
 const Transcription = () => {
     return (
         <div className='Services'>
+                        <img src="https://static.vecteezy.com/system/resources/previews/009/311/650/non_2x/business-people-and-lawyers-discussing-contract-papers-legal-planning-concepts-of-law-advice-legal-services-free-photo.jpg" alt="" />
             <div className='Services-main'>
                 <div className='Services-box'>
                     <div className='Services-left'>
@@ -18,7 +19,7 @@ const Transcription = () => {
                         <p> We are one of the best Transcription Services Providers in Delhi and offering our  Transcription Services in Noida, Mumbai, Gurgaon, Pune, Kolkata,  Surat, Bangalore, Chennai, Hyderabad (South India).</p>
                     </div>
                     <div className='Services-right'>
-                    <ServicesRight title={"Transcription"} display={"flex"} languages={TranscriptionData}/>
+                        <ServicesRight title={"Transcription"} display={"flex"} languages={TranscriptionData} />
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ import languages from './ServiceData'
 const Simultaneous = () => {
     return (
         <div className='Services'>
+                        <img src="https://static.vecteezy.com/system/resources/previews/009/311/650/non_2x/business-people-and-lawyers-discussing-contract-papers-legal-planning-concepts-of-law-advice-legal-services-free-photo.jpg" alt="" />
             <div className='Services-main'>
                 <div className='Services-box'>
                     <div className='Services-left'>
@@ -16,7 +17,7 @@ const Simultaneous = () => {
                         <p> If you are looking for language Simultaneous Interpreters in India, Please send us your requirement at our email or call us at our direct nos.</p>
                     </div>
                     <div className='Services-right'>
-                    <ServicesRight title={"Simultaneous Interpreters"} display={"grid"} languages={languages}/>
+                        <ServicesRight title={"Simultaneous Interpreters"} display={"grid"} languages={languages} />
                     </div>
                 </div>
             </div>

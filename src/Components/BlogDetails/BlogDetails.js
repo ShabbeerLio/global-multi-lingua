@@ -38,21 +38,13 @@ const BlogDetails = () => {
                 <div className="blog-body">
                     <div className="blogdetail-head">
                         <h1>{blogDetail.title}</h1>
-                        <div className="blogdetail-icon">
-                            <span>
-                                <div className="seperator">
-                                    <FaSnowflake />
-                                </div>
-                            </span>
-                        </div>
                         <h5>{blogDetail.date}</h5>
                     </div>
                     <div className="blog-overview">
                         <div className="blog-body-left">
                             <div className="blog-body-detail">
                                 <p>{blogDetail.desc}</p>
-                                <p>{blogDetail.desc1}</p>
-                                {blogDetail.detail.map((item) => (
+                                {/* {blogDetail.detail.map((item) => (
                                     <>
                                         {item.imag ? <img src={item.imag} alt={item.alttag} /> : null}
                                         {item.title ? <h5>{item.title}</h5> : null}
@@ -65,7 +57,7 @@ const BlogDetails = () => {
                                             </>
                                         ))}
                                     </>
-                                ))}
+                                ))} */}
                             </div>
                         </div>
                         <div className="blog-body-right">
@@ -73,7 +65,7 @@ const BlogDetails = () => {
                                 {BlogData.slice().reverse().map((item) => (
                                     <div className="blogs-items-card" key={item.pathName}>
                                         <Link to={{
-                                            pathname: `/blogs/${formatPathname(item.pathName)}/`
+                                            pathname: `/gmls/blogs/${formatPathname(item.pathName)}/`
                                         }} onClick={scrollToTop}>
                                             <img src={item.cover} alt={item.alttag} />
                                             <div className="blog-card-desc">

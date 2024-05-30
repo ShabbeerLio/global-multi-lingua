@@ -9,17 +9,6 @@ const Footer = (props) => {
     return (
         <div className='Footer'>
             <div className="footer-main">
-                {/* <div className="footer-logo">
-                    <div className="footer-logo-box">
-                        <img src={logo} alt="" />
-                        <div className="footer-social">
-                            <Link><FaTwitter /></Link>
-                            <Link><FaLinkedinIn /></Link>
-                            <Link><FaFacebookF /></Link>
-                            <Link><FaGooglePlusG /></Link>
-                        </div>
-                    </div>
-                  </div> */}
                 <div className="footer-box">
                     <div className="footer-menu">
                         <h3>About</h3>
