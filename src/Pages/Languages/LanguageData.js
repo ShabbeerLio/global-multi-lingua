@@ -1,7 +1,7 @@
 const LanguageData = [
     {
         id: 1,
-        category: "European ",
+        category: "European",
         subcategories: [
             {
                 id: 1,
@@ -67,7 +67,7 @@ const LanguageData = [
         subcategories: [
             {
                 id: 1,
-                name: "Belarusian",
+                name: "Belarusian2",
                 description: "Belarusian",
             }, {
 
@@ -125,11 +125,11 @@ const LanguageData = [
     },
     {
         id: 3,
-        category: "Indian ",
+        category: "Indian",
         subcategories: [
             {
                 id: 1,
-                name: "Belarusian",
+                name: "Belarusian3",
                 description: "Belarusian",
             }, {
 

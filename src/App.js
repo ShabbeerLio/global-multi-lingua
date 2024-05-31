@@ -34,7 +34,7 @@ function App() {
           <Route path="/gmls/european-languages" exact element={<Languages heading={"European"} />} />
           <Route path="/gmls/asian-languages" exact element={<Languages heading={"Asian"} />} />
           <Route path="/gmls/indian-languages" exact element={<Languages heading={"Indian"} />} />
-          <Route path="/gmls/:pathName" exact element={<LanguageCard />} />
+          <Route path="/gmls/:categoryId/:pathName" exact element={<LanguageCard />} />
           <Route path="/gmls/services" exact element={<Services />} />
           <Route path="/gmls/industry" exact element={<Industry />} />
           <Route path="/gmls/clients" exact element={<Clients />} />

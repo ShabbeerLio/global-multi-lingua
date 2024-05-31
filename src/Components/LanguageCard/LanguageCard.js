@@ -1,32 +1,32 @@
-import React from 'react'
-import "./LanguageCard.css"
+import React from 'react';
+import './LanguageCard.css';
 import { useParams } from 'react-router-dom';
-import EuropianData from '../../Pages/Languages/EuropianData';
-import AsianData from '../../Pages/Languages/AsianData';
-import IndianData from '../../Pages/Languages/IndianDAta';
+import LanguageData from '../../Pages/Languages/LanguageData';
 
 const LanguageCard = () => {
+    const { pathName, categoryId } = useParams();
 
-    const { name } = useParams();
+    const formatPathname = (pathname) => {
+        return pathname.toLowerCase().replace(/\s+/g, '-');
+    };
 
-    const allData = [...EuropianData, ...AsianData, ...IndianData];
-    const language = allData.find(item => item.name === name);
-    console.log(allData,"data")
-    console.log(language,"language")
+    const category = LanguageData.find(cat => cat.id === parseInt(categoryId));
+    const subcategory = category?.subcategories.find(sub => formatPathname(sub.name) === pathName);
 
-    if (!language) {
-        return <div>Language not found</div>;
+    if (!subcategory) {
+        return <div>Subcategory not found</div>;
     }
+
     return (
         <div className='LanguageCard'>
             <div className='LanguageCard-main'>
                 <div className='LanguageCard-box'>
-                    <h1>{language.name}</h1>
-                    <p>{language.description}</p>
+                    <h1>{subcategory.name}</h1>
+                    <p>{subcategory.description}</p>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default LanguageCard
+export default LanguageCard;
