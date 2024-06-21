@@ -54,6 +54,14 @@
   color: white;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-size: 24px;
+}
+
 @media (min-width: 1200px) {
   .Languages-main {
     max-width: 1140px;
