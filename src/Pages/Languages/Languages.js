@@ -15,7 +15,7 @@ const Languages = (props) => {
             try {
                 const response = await axios.get('https://gmls-backend.onrender.com/api/clients/fetchallclients', {
                     headers: {
-                        'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY3NTEzZGNkMDQxNTA3NDY2MzZlZGRjIn0sImlhdCI6MTcxODk2NjYxMX0.s1bAckwPC4PpcEBYLw0ZX0h_ZiPFsWfRMpED6TEGFIU',
+                        'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY3NmEzNDQ1NzQyZjM1NjgyZTNlMWNjIn0sImlhdCI6MTcxOTA1MTA4NH0.OsZKI_I3GuMyljUYJmdqTCSxFWy_BPaNhDb2gfnXb6Q',
                         'Content-Type': 'application/json',
                     },
                 });

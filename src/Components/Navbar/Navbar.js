@@ -27,10 +27,10 @@ const Navbar = (props) => {
 
 
     const closeMenu = (path) => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'auto'
-        });
+        // window.scrollTo({
+        //     top: 0,
+        //     behavior: 'auto'
+        // });
         const navbarCollapse = document.getElementById('navbarSupportedContent');
         if (navbarCollapse.classList.contains('show')) {
             navbarCollapse.classList.remove('show');
@@ -45,6 +45,10 @@ const Navbar = (props) => {
 
     const handleLinkClick = (path) => {
         setActiveLink(path);
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+        });
     };
 
     const formIsOpen = () => {
