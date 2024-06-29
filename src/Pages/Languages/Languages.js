@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Languages.css";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -26,10 +26,6 @@ const Languages = (props) => {
                 setLoading(false);
             }
         };
-        fetchData();
-    }, []);
-
-    useEffect(() => {
         const selectedCategory = apiDAta?.find(category => category.category === props.heading);
 
         if (selectedCategory) {
@@ -38,6 +34,7 @@ const Languages = (props) => {
         } else {
             setData([]);
         }
+        fetchData();
     }, [apiDAta, props.heading]);
 
     const scrollToTop = () => {
@@ -55,8 +52,8 @@ const Languages = (props) => {
         <div className='Languages'>
             {loading ? (
                 <div className="loader">
-                    <div class="spinner-grow" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    <div className="spinner-grow" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>
             ) : (

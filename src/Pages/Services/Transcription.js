@@ -19,7 +19,7 @@ const Transcription = () => {
                         <p> We are one of the best Transcription Services Providers in Delhi and offering our  Transcription Services in Noida, Mumbai, Gurgaon, Pune, Kolkata,  Surat, Bangalore, Chennai, Hyderabad (South India).</p>
                     </div>
                     <div className='Services-right'>
-                        <ServicesRight title={"Transcription"} display={"flex"} languages={TranscriptionData} />
+                        <ServicesRight title={"Transcription"} languages={TranscriptionData} />
                     </div>
                 </div>
             </div>

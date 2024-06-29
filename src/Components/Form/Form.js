@@ -71,6 +71,7 @@ const Form = () => {
                 </div>
             ) : (
                 <form className='form' ref={form} onSubmit={handleSubmit}>
+                    <h3>Contact Now</h3>
                     <div className="mb-3">
                         <input
                             value={formData.name}

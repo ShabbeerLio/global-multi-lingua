@@ -17,9 +17,14 @@
   margin-right: auto;
   margin-left: auto;
   padding-top: 2rem;
+  display: flex;
+  gap: 1rem;
 }
 
-.LanguageCard-box h1:after {
+.LanguageCard-box-left h1 {
+  color: #673de6;
+}
+.LanguageCard-box-left h1:after {
   content: "";
   margin-top: 2px;
   margin-bottom: 2rem;
@@ -36,6 +41,24 @@
   align-items: center;
   height: 90vh;
   font-size: 24px;
+}
+
+.br-padding {
+  display: block;
+  padding-bottom: 1rem; /* Adjust as needed */
+}
+
+.LanguageCard-box-left {
+  width: 70%;
+}
+
+.LanguageCard-box-right {
+  background-color: #673de6;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 2rem;
+  width: 30%;
+  height: 100%;
 }
 
 @media (min-width: 1200px) {

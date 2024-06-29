@@ -19,9 +19,12 @@
   padding-top: 2rem;
 }
 
+.Languages-main h1 {
+  color: #673de6;
+}
 .Languages-main h1:after {
   content: "";
-  margin-top: 2px;
+  margin-top: 8px;
   display: flex;
   height: 2px;
   width: 20%;
@@ -52,14 +55,6 @@
 .languages-card:hover {
   background-color: #a691e4;
   color: white;
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  font-size: 24px;
 }
 
 @media (min-width: 1200px) {

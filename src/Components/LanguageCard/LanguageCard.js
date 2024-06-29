@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './LanguageCard.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Form from '../Form/Form';
 
 const LanguageCard = () => {
+    const [apiData, setApiData] = useState(null);
+    const [loading, setLoading] = useState(true);
     const { pathName, categoryId } = useParams();
 
-
-    const [apiDAta, setApiDAta] = useState(null);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,7 +20,7 @@ const LanguageCard = () => {
                         'Content-Type': 'application/json',
                     },
                 });
-                setApiDAta(response.data);
+                setApiData(response.data);
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -30,36 +30,34 @@ const LanguageCard = () => {
         fetchData();
     }, []);
 
-
-
     const formatPathname = (pathname) => {
         return pathname.toLowerCase().replace(/\s+/g, '-');
     };
 
-    const category = apiDAta?.find(category => category._id === categoryId);
+    const category = apiData?.find(category => category._id === categoryId);
     const subcategory = category?.subcategories.find(sub => formatPathname(sub.name) === pathName);
 
-
-    // if (!subcategory) {
-    //     return <div>Subcategory not found</div>;
-    // }
+    const formattedDescription = subcategory?.description.replace(/\n/g, '<br /><span class="br-padding"></span>');
 
     return (
-        <div className='LanguageCard'>
+        <div className='Languages'>
             {loading ? (
                 <div className="loader">
-                    <div class="spinner-grow" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    <div className="spinner-grow" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>
             ) : (
                 <>
-                <div className='LanguageCard-main'>
-                    <div className='LanguageCard-box'>
-                        <h1>{subcategory.name} Translation Services</h1>
-                        <p>{subcategory.description}</p>
+                    <div className='LanguageCard-main'>
+                        <div className='LanguageCard-box-left'>
+                            <h1>{subcategory.name} Translation Services</h1>
+                            <p dangerouslySetInnerHTML={{ __html: formattedDescription }}></p>
+                        </div>
+                        <div className="LanguageCard-box-right">
+                            <Form />
+                        </div>
                     </div>
-                </div>
                 </>
             )}
         </div>

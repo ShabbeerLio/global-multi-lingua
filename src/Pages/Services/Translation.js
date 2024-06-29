@@ -22,7 +22,7 @@ const Translation = () => {
                             <li>Maintain the Confidentiality  of your documents.</li>
                             <li>Transparent cost  which does not include any hidden cost.</li>
                         </ul>
-                        <p>Our language experts portfolio includes almost all major  Languages                      - Japanese, Chinese, Russian, French, Spanish, Portuguese, Italian, Polish, Persian, Arabic and Indian.</p>
+                        <p>Our language experts portfolio includes almost all major  Languages - Japanese, Chinese, Russian, French, Spanish, Portuguese, Italian, Polish, Persian, Arabic and Indian.</p>
                         <h5>Japanese Translators in Delhi</h5>
                         <p>Our translation  team has professional & experienced Japanese Translators.  All of our translators are experienced and capable enough to offer English to Japanese  or Japanese to English Translation Services.</p>
                         <h5>Chinese Translators in Delhi</h5>
@@ -38,7 +38,7 @@ const Translation = () => {
                         </p>
                     </div>
                     <div className='Services-right'>
-                        <ServicesRight title={"Translators"} languages={languages} display={"grid"}/>
+                        <ServicesRight title={"Translators"} />
                     </div>
                 </div>
             </div>

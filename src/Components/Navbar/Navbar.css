@@ -118,6 +118,10 @@
   padding: 10px;
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .navbar-light .navbar-toggler {
   border: none;
   box-shadow: none;
