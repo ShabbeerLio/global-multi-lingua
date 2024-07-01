@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Form from '../../Components/Form/Form';
+import Host from '../Host';
 
 const ServicesRight = () => {
 
@@ -12,7 +13,7 @@ const ServicesRight = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('https://gmls-backend.onrender.com/api/clients/fetchallclients', {
+                const response = await axios.get(`${Host}/api/clients/fetchallclients`, {
                     headers: {
                         'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY3NmEzNDQ1NzQyZjM1NjgyZTNlMWNjIn0sImlhdCI6MTcxOTA1MTA4NH0.OsZKI_I3GuMyljUYJmdqTCSxFWy_BPaNhDb2gfnXb6Q',
                         'Content-Type': 'application/json',

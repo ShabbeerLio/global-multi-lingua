@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Blog.css"
 import { Link, useLocation } from 'react-router-dom'
 import BlogData from './BlogData';
@@ -6,9 +6,37 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import ReactOwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import axios from 'axios';
+import Host from '../../Pages/Host';
 
 
 const Blog = () => {
+
+    // Api
+    const [apiData, setApiData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                const response = await axios.get(`${Host}/api/blog/fetchallblog`, {
+                    headers: {
+                        'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY3NmEzNDQ1NzQyZjM1NjgyZTNlMWNjIn0sImlhdCI6MTcxOTA1MTA4NH0.OsZKI_I3GuMyljUYJmdqTCSxFWy_BPaNhDb2gfnXb6Q',
+                        'Content-Type': 'application/json',
+                    },
+                });
+                setApiData(response.data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
 
     const responsiveOptions = {
         0: {
@@ -53,7 +81,7 @@ const Blog = () => {
                                 {/* <p>We are expert in language translation & interpretation services in  major languages. We deliver our propmt services in following ares  to our clients in order to make the communication more effective.</p> */}
                             </div>
                             <div className="hClient-button">
-                                <Link to={"/blogs"} onClick={scrollToTop}>View More <FaArrowRightLong /></Link>
+                                <Link to={"/gmls/blogs"} onClick={scrollToTop}>View More <FaArrowRightLong /></Link>
                             </div>
                         </div>
                         <div className="home-blog-box">
@@ -69,18 +97,22 @@ const Blog = () => {
                                 responsive={responsiveOptions}
                             >
                                 {/* {BlogData.slice(1).reverse().slice(0, 3).map((item) => ( */}
-                                {BlogData.map((item) => (
-                                    <div className="blog-box-item" key={item.id}>
-                                        <Link to={"/"} onClick={scrollToTop}>
-                                            <img src={item.cover} alt={""} />
+                                {apiData?.map((item) => (
+                                    <div className="blog-box-item" key={item._id}>
+                                        <Link to={{
+                                            pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
+                                        }} onClick={scrollToTop}>
+                                            <img src={`${Host}${item.catimageUrl}`} alt={item.category} />
                                             <div className="blog-card-desc">
-                                                <p>{item.date}</p>
-                                                <h4>{item.title}</h4>
-                                                <p>{trimDescription(item.desc)}</p>
+                                                <p>{new Date(item.date).toLocaleDateString()}</p>
+                                                <h6>{item.category}</h6>
+                                                <p>{trimDescription(item.categorydesc)}</p>
                                             </div>
                                         </Link>
                                         <div className="blog-box-button">
-                                            <Link to={"/"} onClick={scrollToTop}>View More</Link>
+                                            <Link to={{
+                                                pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
+                                            }} onClick={scrollToTop}>View More</Link>
                                         </div>
                                     </div>
                                 ))}

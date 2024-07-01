@@ -1,10 +1,36 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./BlogDetails.css"
 import { Link, useLocation, useParams } from 'react-router-dom'
-import { FaSnowflake } from "react-icons/fa6";
-import BlogData from '../Blog/BlogData';
+import axios from 'axios';
+import Host from '../../Pages/Host';
 
 const BlogDetails = () => {
+
+    // Api
+    const [apiData, setApiData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                const response = await axios.get(`${Host}/api/blog/fetchallblog`, {
+                    headers: {
+                        'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY3NmEzNDQ1NzQyZjM1NjgyZTNlMWNjIn0sImlhdCI6MTcxOTA1MTA4NH0.OsZKI_I3GuMyljUYJmdqTCSxFWy_BPaNhDb2gfnXb6Q',
+                        'Content-Type': 'application/json',
+                    },
+                });
+                setApiData(response.data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
     /* global dataLayer */
     const location = useLocation();
     const { pathName } = useParams();
@@ -14,11 +40,12 @@ const BlogDetails = () => {
         return title.toLowerCase().replace(/\s+/g, '-');
     };
 
-    const blogDetail = BlogData.find(item => item.pathName === pathName);
+    const blogDetail = apiData?.find(item => item.tag === pathName);
+    console.log(blogDetail, "data")
 
-    if (!blogDetail) {
-        return <div>Item not found</div>;
-    }
+    // if (!blogDetail) {
+    //     return <div>Item not found</div>;
+    // }
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -29,57 +56,61 @@ const BlogDetails = () => {
 
     return (
         <div className='HotelDetail' key="{subCategoryItem.id}">
-            <div className="hotel-detail-box">
-                <div className="blog-banner">
-                    <img src={blogDetail.cover} alt={blogDetail.alttag} />
-                </div>
-            </div>
-            <div className="blog-box2">
-                <div className="blog-body">
-                    <div className="blogdetail-head">
-                        <h1>{blogDetail.title}</h1>
-                        <h5>{blogDetail.date}</h5>
+            {loading ? (
+                <div className="loader">
+                    <div className="spinner-grow" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
-                    <div className="blog-overview">
-                        <div className="blog-body-left">
-                            <div className="blog-body-detail">
-                                <p>{blogDetail.desc}</p>
-                                {/* {blogDetail.detail.map((item) => (
-                                    <>
-                                        {item.imag ? <img src={item.imag} alt={item.alttag} /> : null}
-                                        {item.title ? <h5>{item.title}</h5> : null}
-                                        {item.detailDesc.map((d) => (
+                </div>
+            ) : (
+                <>
+                    <div className="hotel-detail-box">
+                        <div className="blog-banner">
+                            <img src={`${Host}${blogDetail.catimageUrl}`} alt={blogDetail.category} />
+                        </div>
+                    </div>
+                    <div className="blog-box2">
+                        <div className="blog-body">
+                            <div className="blogdetail-head">
+                                <h1>{blogDetail.category}</h1>
+                                <h5>{new Date(blogDetail.date).toLocaleDateString()}</h5>
+                            </div>
+                            <div className="blog-overview">
+                                <div className="blog-body-left">
+                                    <div className="blog-body-detail">
+                                        <p>{blogDetail.categorydesc}</p>
+                                        {blogDetail.subcategories?.map((item) => (
                                             <>
-                                                <div className="blog-detail-detail">
-                                                    {d.title ? <span>{d.title}</span> : null}
-                                                    <p key={d.id}>{d.desc}</p>
+                                                <div key={item._id}>
+                                                    {item.imageUrl ? <img src={`${Host}${item.imageUrl}`} alt={blogDetail.name} /> : null}
+                                                    {item.name ? <h5>{item.name}</h5> : null}
+                                                    {item.description ? <p>{item.description}</p> : null}
                                                 </div>
                                             </>
                                         ))}
-                                    </>
-                                ))} */}
-                            </div>
-                        </div>
-                        <div className="blog-body-right">
-                            <div className="blog-right-items">
-                                {BlogData.slice().reverse().map((item) => (
-                                    <div className="blogs-items-card" key={item.pathName}>
-                                        <Link to={{
-                                            pathname: `/gmls/blogs/${formatPathname(item.pathName)}/`
-                                        }} onClick={scrollToTop}>
-                                            <img src={item.cover} alt={item.alttag} />
-                                            <div className="blog-card-desc">
-                                                <h6>{item.title}</h6>
-                                                <p>{item.date}</p>
-                                            </div>
-                                        </Link>
                                     </div>
-                                ))}
+                                </div>
+                                <div className="blog-body-right">
+                                    <div className="blog-right-items">
+                                        {apiData.slice().reverse().map((item) => (
+                                            <div className="blogs-items-card" key={item.tag}>
+                                                <Link to={{
+                                                    pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
+                                                }} onClick={scrollToTop}>
+                                                    <img src={`${Host}${item.catimageUrl}`} alt={item.category} />
+                                                    <div className="blog-card-desc">
+                                                        <h6>{item.category}</h6>
+                                                        <p>{new Date(item.date).toLocaleDateString()}</p>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </>)}
         </div>
     )
 }

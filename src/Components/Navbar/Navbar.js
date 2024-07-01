@@ -192,7 +192,7 @@ const Navbar = (props) => {
                                                                 </path>
                                                             </g>
                                                         </svg>
-                                                        9013418980
+                                                        +91 9013418980
                                                     </Link>
                                                 </p>
                                             </div>

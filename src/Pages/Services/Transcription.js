@@ -2,11 +2,13 @@ import React from 'react'
 import "./Services.css"
 import ServicesRight from './ServicesRight'
 import TranscriptionData from './TranscriptionData'
+import timg from "../../Assets/Services/transcription.jpg"
+
 
 const Transcription = () => {
     return (
         <div className='Services'>
-                        <img src="https://static.vecteezy.com/system/resources/previews/009/311/650/non_2x/business-people-and-lawyers-discussing-contract-papers-legal-planning-concepts-of-law-advice-legal-services-free-photo.jpg" alt="" />
+                        <img src={timg} alt="" />
             <div className='Services-main'>
                 <div className='Services-box'>
                     <div className='Services-left'>

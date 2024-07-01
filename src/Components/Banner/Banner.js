@@ -37,7 +37,7 @@ const Banner = () => {
                                 <h1>We provide experienced & professional Translators</h1>
                                 <p>You need to communicate in various languages & cultures , We can assist you in bridging language gap.</p>
                                 <div className="banner-button">
-                                    <Link>Our Services <FaArrowRightLong /></Link>
+                                    <Link to={"/gmls/services"}>Our Services <FaArrowRightLong /></Link>
                                 </div>
                             </div>
                         </div>
