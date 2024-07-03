@@ -66,7 +66,7 @@ const BlogDetails = () => {
                 <>
                     <div className="hotel-detail-box">
                         <div className="blog-banner">
-                            <img src={`${Host}${blogDetail.catimageUrl}`} alt={blogDetail.category} />
+                            <img src={blogDetail.catimageUrl} alt={blogDetail.category} />
                         </div>
                     </div>
                     <div className="blog-box2">
@@ -82,7 +82,7 @@ const BlogDetails = () => {
                                         {blogDetail.subcategories?.map((item) => (
                                             <>
                                                 <div key={item._id}>
-                                                    {item.imageUrl ? <img src={`${Host}${item.imageUrl}`} alt={blogDetail.name} /> : null}
+                                                    {item.imageUrl ? <img src={item.imageUrl} alt={blogDetail.name} /> : null}
                                                     {item.name ? <h5>{item.name}</h5> : null}
                                                     {item.description ? <p>{item.description}</p> : null}
                                                 </div>
@@ -97,7 +97,7 @@ const BlogDetails = () => {
                                                 <Link to={{
                                                     pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
                                                 }} onClick={scrollToTop}>
-                                                    <img src={`${Host}${item.catimageUrl}`} alt={item.category} />
+                                                    <img src={item.catimageUrl} alt={item.category} />
                                                     <div className="blog-card-desc">
                                                         <h6>{item.category}</h6>
                                                         <p>{new Date(item.date).toLocaleDateString()}</p>

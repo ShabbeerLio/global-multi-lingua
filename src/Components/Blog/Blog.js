@@ -102,7 +102,7 @@ const Blog = () => {
                                         <Link to={{
                                             pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
                                         }} onClick={scrollToTop}>
-                                            <img src={`${Host}${item.catimageUrl}`} alt={item.category} />
+                                            <img src={item.catimageUrl} alt={item.category} />
                                             <div className="blog-card-desc">
                                                 <p>{new Date(item.date).toLocaleDateString()}</p>
                                                 <h6>{item.category}</h6>

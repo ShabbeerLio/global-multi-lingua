@@ -1,2 +1,2 @@
-const Host = "https://gmls-backend.vercel.app"
+const Host = "https://gmls-backend.onrender.com"
 export default Host

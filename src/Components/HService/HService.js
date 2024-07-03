@@ -43,10 +43,10 @@ const HService = () => {
                     <p>We are expert in language translation & interpretation services in  major languages. We deliver our propmt services in following ares  to our clients in order to make the communication more effective.</p>
                 </div>
                 <div className="hService-box">
-                    {apiData?.map((item) => (
+                    {apiData?.slice(0 , 10).map((item) => (
                         <div className="hservice-card" key={item._id}>
                             <div className="hsrevices-image">
-                                <img src={`${Host}${item.imageUrl}`} alt="" />
+                                <img src={item.imageUrl} alt="" />
                             </div>
                             <h4>{item.title}</h4>
                         </div>

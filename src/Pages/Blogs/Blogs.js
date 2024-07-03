@@ -69,7 +69,7 @@ const Blogs = () => {
                                         <Link to={{
                                             pathname: `/gmls/blogs/${formatPathname(apiData[apiData?.length - 1].tag)}/`
                                         }} onClick={scrollToTop} >
-                                            <img src={`${Host}${apiData[apiData?.length - 1].catimageUrl}`} alt="" />
+                                            <img src={apiData[apiData?.length - 1].catimageUrl} alt="" />
                                             {/* <img src={apiData[apiData?.length - 1].catimageUrl} alt={apiData[apiData?.length - 1].category} /> */}
                                         </Link>
                                     </div>
@@ -91,7 +91,7 @@ const Blogs = () => {
                                                 <Link to={{
                                                     pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
                                                 }} onClick={scrollToTop}>
-                                                    <img src={`${Host}${item.catimageUrl}`} alt={item.category} />
+                                                    <img src={item.catimageUrl} alt={item.category} />
                                                     <div className="blog-card-desc">
                                                         <h6>{item.category}</h6>
                                                         <p>{new Date(item.date).toLocaleDateString()}</p>

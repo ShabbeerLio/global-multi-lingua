@@ -42,7 +42,7 @@ const Services = () => {
                             {apiData?.map((item) => (
                                 <div className="hservice-card" key={item._id}>
                                     <div className="hsrevices-image">
-                                        <img src={`${Host}${item.imageUrl}`} alt="" />
+                                        <img src={item.imageUrl} alt="" />
                                     </div>
                                     <h4>{item.title}</h4>
                                 </div>
