@@ -81,7 +81,7 @@ const Blog = () => {
                                 {/* <p>We are expert in language translation & interpretation services in  major languages. We deliver our propmt services in following ares  to our clients in order to make the communication more effective.</p> */}
                             </div>
                             <div className="hClient-button">
-                                <Link to={"/gmls/blogs"} onClick={scrollToTop}>View More <FaArrowRightLong /></Link>
+                                <Link to={"/blogs"} onClick={scrollToTop}>View More <FaArrowRightLong /></Link>
                             </div>
                         </div>
                         <div className="home-blog-box">
@@ -100,7 +100,7 @@ const Blog = () => {
                                 {apiData?.map((item) => (
                                     <div className="blog-box-item" key={item._id}>
                                         <Link to={{
-                                            pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
+                                            pathname: `/blogs/${formatPathname(item.tag)}/`
                                         }} onClick={scrollToTop}>
                                             <img src={item.catimageUrl} alt={item.category} />
                                             <div className="blog-card-desc">
@@ -111,7 +111,7 @@ const Blog = () => {
                                         </Link>
                                         <div className="blog-box-button">
                                             <Link to={{
-                                                pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
+                                                pathname: `/blogs/${formatPathname(item.tag)}/`
                                             }} onClick={scrollToTop}>View More</Link>
                                         </div>
                                     </div>
