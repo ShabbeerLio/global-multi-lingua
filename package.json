@@ -1,6 +1,5 @@
 {
   "name": "global-multilingua-services",
-  "homepage": "https://globalitsources.com/gmls",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
