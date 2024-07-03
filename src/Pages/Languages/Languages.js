@@ -66,7 +66,7 @@ const Languages = (props) => {
                         </div>
                         <div className="languages-box">
                             {data.map((item) => (
-                                <Link to={{ pathname: `/gmls/${categoryId}/${formatPathname(item.name)}` }}
+                                <Link to={{ pathname: `/${categoryId}/${formatPathname(item.name)}` }}
                                     key={item._id}
                                     onClick={scrollToTop}>
                                     <div className="languages-card">

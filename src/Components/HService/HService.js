@@ -53,7 +53,7 @@ const HService = () => {
                     ))}
                 </div>
                 <div className="hServices-button">
-                    <Link to={"/gmls/services"} onClick={scroll}>View More</Link>
+                    <Link to={"/services"} onClick={scroll}>View More</Link>
                 </div>
             </div>
         </div>

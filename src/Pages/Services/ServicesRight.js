@@ -53,7 +53,7 @@ const ServicesRight = () => {
                             <h5>{item.category}</h5>
                             <div className="serviceright-box-card">
                                 {item.subcategories.slice(0, 6).map((j) => (
-                                    <Link to={{ pathname: `/gmls/${item._id}/${formatPathname(j.name)}` }}
+                                    <Link to={{ pathname: `/${item._id}/${formatPathname(j.name)}` }}
                                         key={j._id}
                                         onClick={scrollToTop}>
                                         {j.name}

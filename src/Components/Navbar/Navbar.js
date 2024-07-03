@@ -69,9 +69,9 @@ const Navbar = (props) => {
                             <div className="company-logo">
                                 <div className="company-logo-box">
                                     <Link
-                                        className={`nav-link ${activeLink === '/gmls' ? 'active' : ''}`}
-                                        to="/gmls"
-                                        onClick={() => handleLinkClick('/gmls')}
+                                        className={`nav-link ${activeLink === '/' ? 'active' : ''}`}
+                                        to="/"
+                                        onClick={() => handleLinkClick('/')}
                                     >
                                         <img src={Logo} alt="" />
                                     </Link>
@@ -96,18 +96,18 @@ const Navbar = (props) => {
                                     <ul className="navbar-nav ml-auto">
                                         <li className="nav-item">
                                             <Link
-                                                className={`nav-link ${activeLink === '/gmls' ? 'active' : ''}`}
-                                                to="/gmls"
-                                                onClick={() => closeMenu('/gmls')}
+                                                className={`nav-link ${activeLink === '/' ? 'active' : ''}`}
+                                                to="/"
+                                                onClick={() => closeMenu('/')}
                                             >
                                                 Home
                                             </Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link
-                                                className={`nav-link ${activeLink === '/gmls/about' ? 'active' : ''}`}
-                                                to="/gmls/about"
-                                                onClick={() => closeMenu('/gmls/about')}
+                                                className={`nav-link ${activeLink === '/about' ? 'active' : ''}`}
+                                                to="/about"
+                                                onClick={() => closeMenu('/about')}
                                             >About</Link>
                                         </li>
                                         <li className="nav-item dropdown">
@@ -119,11 +119,11 @@ const Navbar = (props) => {
                                                 Services
                                             </Link>
                                             <ul className="dropdown-menu" aria-labelledby="navbarDropdogmls/wn">
-                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/translation-services' ? 'active' : ''}`} to="/gmls/translation-services" onClick={() => closeMenu('/gmls/translation-services')}>Translation Services</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/interpretation-services' ? 'active' : ''}`} to="/gmls/interpretation-services" onClick={() => closeMenu('/gmls/interpretation-services')}>Interpretation Services</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/transcription-services' ? 'active' : ''}`} to="/gmls/transcription-services" onClick={() => closeMenu('/gmls/transcription-services')}>Transcription Services</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/apostille-services' ? 'active' : ''}`} to="/gmls/apostille-services" onClick={() => closeMenu('/gmls/apostille-services')}>Apostille Services</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/simultaneous-equipment' ? 'active' : ''}`} to="/gmls/simultaneous-equipment" onClick={() => closeMenu('/gmls/simultaneous-equipment')}>Simultaneous Equipment</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/translation-services' ? 'active' : ''}`} to="/translation-services" onClick={() => closeMenu('/translation-services')}>Translation Services</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/interpretation-services' ? 'active' : ''}`} to="/interpretation-services" onClick={() => closeMenu('/interpretation-services')}>Interpretation Services</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/transcription-services' ? 'active' : ''}`} to="/transcription-services" onClick={() => closeMenu('/transcription-services')}>Transcription Services</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/apostille-services' ? 'active' : ''}`} to="/apostille-services" onClick={() => closeMenu('/apostille-services')}>Apostille Services</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/simultaneous-equipment' ? 'active' : ''}`} to="/simultaneous-equipment" onClick={() => closeMenu('/simultaneous-equipment')}>Simultaneous Equipment</Link></li>
                                             </ul>
                                         </li>
                                         <li className="nav-item dropdown">
@@ -135,36 +135,36 @@ const Navbar = (props) => {
                                                 Languages
                                             </Link>
                                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/european-languages' ? 'active' : ''}`} to="/gmls/european-languages" onClick={() => closeMenu('/gmls/european-languages')}>European Languages</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/asian-languages' ? 'active' : ''}`} to="/gmls/asian-languages" onClick={() => closeMenu('/gmls/asian-languages')}>Asian Languages</Link></li>
-                                                <li><Link className={`dropdown-item ${activeLink === '/gmls/indian-languages' ? 'active' : ''}`} to="/gmls/indian-languages" onClick={() => closeMenu('/gmls/indian-languages')}>Indian Languages</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/european-languages' ? 'active' : ''}`} to="/european-languages" onClick={() => closeMenu('/european-languages')}>European Languages</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/asian-languages' ? 'active' : ''}`} to="/asian-languages" onClick={() => closeMenu('/asian-languages')}>Asian Languages</Link></li>
+                                                <li><Link className={`dropdown-item ${activeLink === '/indian-languages' ? 'active' : ''}`} to="/indian-languages" onClick={() => closeMenu('/indian-languages')}>Indian Languages</Link></li>
                                             </ul>
                                         </li>
                                         <li className="nav-item">
                                             <Link
                                                 className={`nav-link ${activeLink === '/industry' ? 'active' : ''}`}
-                                                to="/gmls/industry"
+                                                to="/industry"
                                                 onClick={() => closeMenu('/industry')}
                                             >Industry</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link
                                                 className={`nav-link ${activeLink === '/clients' ? 'active' : ''}`}
-                                                to="/gmls/clients"
+                                                to="/clients"
                                                 onClick={() => closeMenu('/clients')}
                                             >Clients</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link
                                                 className={`nav-link ${activeLink === '/blogs' ? 'active' : ''}`}
-                                                to="/gmls/blogs"
+                                                to="/blogs"
                                                 onClick={() => closeMenu('/blogs')}
                                             >Blog</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link
                                                 className={`nav-link ${activeLink === '/contact' ? 'active' : ''}`}
-                                                to="/gmls/contact"
+                                                to="/contact"
                                                 onClick={() => closeMenu('/contact')}
                                             >Contact Us</Link>
                                         </li>

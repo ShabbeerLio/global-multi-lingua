@@ -67,7 +67,7 @@ const Blogs = () => {
                                 <div className="blog-body-left">
                                     <div className="blog-body-image">
                                         <Link to={{
-                                            pathname: `/gmls/blogs/${formatPathname(apiData[apiData?.length - 1].tag)}/`
+                                            pathname: `/blogs/${formatPathname(apiData[apiData?.length - 1].tag)}/`
                                         }} onClick={scrollToTop} >
                                             <img src={apiData[apiData?.length - 1].catimageUrl} alt="" />
                                             {/* <img src={apiData[apiData?.length - 1].catimageUrl} alt={apiData[apiData?.length - 1].category} /> */}
@@ -79,7 +79,7 @@ const Blogs = () => {
                                         <p>{apiData[apiData?.length - 1].categorydesc}</p>
                                         <div className="body-left-button">
                                             <Link to={{
-                                                pathname: `/gmls/blogs/${formatPathname(BlogData[BlogData.length - 1].pathName)}/`
+                                                pathname: `/blogs/${formatPathname(BlogData[BlogData.length - 1].pathName)}/`
                                             }} onClick={scrollToTop}>View More</Link>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@ const Blogs = () => {
                                         {apiData.slice().reverse().map((item) => (
                                             <div className="blogs-items-card" key={item.tag}>
                                                 <Link to={{
-                                                    pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
+                                                    pathname: `/blogs/${formatPathname(item.tag)}/`
                                                 }} onClick={scrollToTop}>
                                                     <img src={item.catimageUrl} alt={item.category} />
                                                     <div className="blog-card-desc">

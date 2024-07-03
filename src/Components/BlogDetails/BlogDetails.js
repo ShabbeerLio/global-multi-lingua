@@ -95,7 +95,7 @@ const BlogDetails = () => {
                                         {apiData.slice().reverse().map((item) => (
                                             <div className="blogs-items-card" key={item.tag}>
                                                 <Link to={{
-                                                    pathname: `/gmls/blogs/${formatPathname(item.tag)}/`
+                                                    pathname: `/blogs/${formatPathname(item.tag)}/`
                                                 }} onClick={scrollToTop}>
                                                     <img src={item.catimageUrl} alt={item.category} />
                                                     <div className="blog-card-desc">

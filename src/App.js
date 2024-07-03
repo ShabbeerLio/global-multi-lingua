@@ -25,23 +25,23 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/gmls" exact element={<Home />} />
-            <Route path="/gmls/about" exact element={<About />} />
-            <Route path="/gmls/translation-services" exact element={<Translation />} />
-            <Route path="/gmls/interpretation-services" exact element={<Interpretation />} />
-            <Route path="/gmls/transcription-services" exact element={<Transcription />} />
-            <Route path="/gmls/apostille-services" exact element={<Apostille />} />
-            <Route path="/gmls/simultaneous-equipment" exact element={<Simultaneous />} />
-            <Route path="/gmls/european-languages" exact element={<Languages heading={"European"} />} />
-            <Route path="/gmls/asian-languages" exact element={<Languages heading={"Asian"} />} />
-            <Route path="/gmls/indian-languages" exact element={<Languages heading={"Indian"} />} />
-            <Route path="/gmls/:categoryId/:pathName" exact element={<LanguageCard />} />
-            <Route path="/gmls/services" exact element={<Services />} />
-            <Route path="/gmls/industry" exact element={<Industry />} />
-            <Route path="/gmls/clients" exact element={<Clients />} />
-            <Route path="/gmls/contact" exact element={<Contact />} />
-            <Route path="/gmls/blogs/" exact element={<Blogs />} />
-            <Route path="/gmls/blogs/:pathName" exact element={<BlogDetails />} />
+            <Route path="/" exact element={<Home />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/translation-services" exact element={<Translation />} />
+            <Route path="/interpretation-services" exact element={<Interpretation />} />
+            <Route path="/transcription-services" exact element={<Transcription />} />
+            <Route path="/apostille-services" exact element={<Apostille />} />
+            <Route path="/simultaneous-equipment" exact element={<Simultaneous />} />
+            <Route path="/european-languages" exact element={<Languages heading={"European"} />} />
+            <Route path="/asian-languages" exact element={<Languages heading={"Asian"} />} />
+            <Route path="/indian-languages" exact element={<Languages heading={"Indian"} />} />
+            <Route path="/:categoryId/:pathName" exact element={<LanguageCard />} />
+            <Route path="/services" exact element={<Services />} />
+            <Route path="/industry" exact element={<Industry />} />
+            <Route path="/clients" exact element={<Clients />} />
+            <Route path="/contact" exact element={<Contact />} />
+            <Route path="/blogs/" exact element={<Blogs />} />
+            <Route path="/blogs/:pathName" exact element={<BlogDetails />} />
           </Routes>
           <Footer />
         </BrowserRouter>
