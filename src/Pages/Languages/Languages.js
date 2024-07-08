@@ -9,7 +9,7 @@ const Languages = (props) => {
     const [apiDAta, setApiDAta] = useState(null);
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState([]);
-    const [categoryId, setCategoryId] = useState();
+    // const [categoryId, setCategoryId] = useState();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -28,10 +28,11 @@ const Languages = (props) => {
             }
         };
         const selectedCategory = apiDAta?.find(category => category.category === props.heading);
+        // console.log(selectedCategory,"selectedCategory")
 
         if (selectedCategory) {
             setData(selectedCategory.subcategories);
-            setCategoryId(selectedCategory._id);
+            // setCategoryId(selectedCategory.category);
         } else {
             setData([]);
         }
@@ -66,7 +67,9 @@ const Languages = (props) => {
                         </div>
                         <div className="languages-box">
                             {data.map((item) => (
-                                <Link to={{ pathname: `/${categoryId}/${formatPathname(item.name)}` }}
+                                <Link to={{
+                                    pathname: `/${formatPathname(item.name)}-translation-services`
+                                }}
                                     key={item._id}
                                     onClick={scrollToTop}>
                                     <div className="languages-card">

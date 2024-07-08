@@ -113,22 +113,6 @@
   margin-bottom: 1rem;
 }
 
-.banner-right-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.banner-right-box form select {
-  border-radius: 8px;
-  border: none;
-  padding: 15px;
-}
-.banner-right-box form input {
-  border-radius: 8px;
-  border: none;
-  padding: 15px;
-}
-
 .form-control:focus {
   /* color: transparent; */
   background-color: #fff;

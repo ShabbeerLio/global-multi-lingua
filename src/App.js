@@ -35,7 +35,7 @@ function App() {
             <Route path="/european-languages" exact element={<Languages heading={"European"} />} />
             <Route path="/asian-languages" exact element={<Languages heading={"Asian"} />} />
             <Route path="/indian-languages" exact element={<Languages heading={"Indian"} />} />
-            <Route path="/:categoryId/:pathName" exact element={<LanguageCard />} />
+            <Route path="/:pathName" exact element={<LanguageCard />} />
             <Route path="/services" exact element={<Services />} />
             <Route path="/industry" exact element={<Industry />} />
             <Route path="/clients" exact element={<Clients />} />

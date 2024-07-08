@@ -41,7 +41,7 @@ const BlogDetails = () => {
     };
 
     const blogDetail = apiData?.find(item => item.tag === pathName);
-    console.log(blogDetail, "data")
+    // console.log(blogDetail, "data")
 
     // if (!blogDetail) {
     //     return <div>Item not found</div>;

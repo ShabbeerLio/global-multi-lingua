@@ -8,8 +8,9 @@ import Host from '../../Pages/Host';
 const LanguageCard = () => {
     const [apiData, setApiData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const { pathName, categoryId } = useParams();
-
+    const { pathName } = useParams();
+    // Extract the actual name from the pathname
+    const actualName = pathName.replace('-translation-services', '');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -21,7 +22,13 @@ const LanguageCard = () => {
                         'Content-Type': 'application/json',
                     },
                 });
-                setApiData(response.data);
+
+                const data = response.data;
+                // Extract all subcategories
+                const subcategories = data.reduce((acc, category) => {
+                    return acc.concat(category.subcategories);
+                }, []);
+                setApiData(subcategories);
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -31,12 +38,12 @@ const LanguageCard = () => {
         fetchData();
     }, []);
 
-    const formatPathname = (pathname) => {
-        return pathname.toLowerCase().replace(/\s+/g, '-');
+    const formatPathname = (actualName) => {
+        return actualName.toLowerCase().replace(/\s+/g, '-');
     };
 
-    const category = apiData?.find(category => category._id === categoryId);
-    const subcategory = category?.subcategories.find(sub => formatPathname(sub.name) === pathName);
+    // const category = apiData?.find(category => category.category === categoryId);
+    const subcategory = apiData?.find(sub => formatPathname(sub.name) === actualName);
 
     const formattedDescription = subcategory?.description.replace(/\n/g, '<br /><span class="br-padding"></span>');
 

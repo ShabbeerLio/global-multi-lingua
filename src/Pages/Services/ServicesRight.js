@@ -53,7 +53,7 @@ const ServicesRight = () => {
                             <h5>{item.category}</h5>
                             <div className="serviceright-box-card">
                                 {item.subcategories.slice(0, 6).map((j) => (
-                                    <Link to={{ pathname: `/${item._id}/${formatPathname(j.name)}` }}
+                                    <Link to={{ pathname: `/${formatPathname(j.name)}-translation-services` }}
                                         key={j._id}
                                         onClick={scrollToTop}>
                                         {j.name}
@@ -65,7 +65,7 @@ const ServicesRight = () => {
                 </ul>
             </div>
             <div className="serviceright-form">
-                <Form/>
+                <Form />
             </div>
         </div>
     )

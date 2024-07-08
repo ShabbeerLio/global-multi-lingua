@@ -73,54 +73,62 @@ const Blog = () => {
     return (
         <div className='Blog'>
             <div className='Blog-main'>
-                <div className="home-blogs">
-                    <div className="home-boxes">
-                        <div className="hClient-heading">
-                            <div className="hClient-head">
-                                <h2>Blogs</h2>
-                                {/* <p>We are expert in language translation & interpretation services in  major languages. We deliver our propmt services in following ares  to our clients in order to make the communication more effective.</p> */}
-                            </div>
-                            <div className="hClient-button">
-                                <Link to={"/blogs"} onClick={scrollToTop}>View More <FaArrowRightLong /></Link>
-                            </div>
-                        </div>
-                        <div className="home-blog-box">
-                            <ReactOwlCarousel
-                                loop={Infinity}
-                                items={3}
-                                nav={false}
-                                dots={false}
-                                autoplay={true}
-                                autoplayTimeout={3000}
-                                autoplaySpeed={1000}
-                                smartSpeed={1000}
-                                responsive={responsiveOptions}
-                            >
-                                {/* {BlogData.slice(1).reverse().slice(0, 3).map((item) => ( */}
-                                {apiData?.map((item) => (
-                                    <div className="blog-box-item" key={item._id}>
-                                        <Link to={{
-                                            pathname: `/blogs/${formatPathname(item.tag)}/`
-                                        }} onClick={scrollToTop}>
-                                            <img src={item.catimageUrl} alt={item.category} />
-                                            <div className="blog-card-desc">
-                                                <p>{new Date(item.date).toLocaleDateString()}</p>
-                                                <h6>{item.category}</h6>
-                                                <p>{trimDescription(item.categorydesc)}</p>
-                                            </div>
-                                        </Link>
-                                        <div className="blog-box-button">
-                                            <Link to={{
-                                                pathname: `/blogs/${formatPathname(item.tag)}/`
-                                            }} onClick={scrollToTop}>View More</Link>
-                                        </div>
-                                    </div>
-                                ))}
-
-                            </ReactOwlCarousel>
+                {loading ? (
+                    <div className="loader">
+                        <div className="spinner-grow" role="status">
+                            <span className="visually-hidden">Loading...</span>
                         </div>
                     </div>
-                </div>
+                ) : (
+                    <div className="home-blogs">
+                        <div className="home-boxes">
+                            <div className="hClient-heading">
+                                <div className="hClient-head">
+                                    <h2>Blogs</h2>
+                                    {/* <p>We are expert in language translation & interpretation services in  major languages. We deliver our propmt services in following ares  to our clients in order to make the communication more effective.</p> */}
+                                </div>
+                                <div className="hClient-button">
+                                    <Link to={"/blogs"} onClick={scrollToTop}>View More <FaArrowRightLong /></Link>
+                                </div>
+                            </div>
+                            <div className="home-blog-box">
+                                <ReactOwlCarousel
+                                    loop={Infinity}
+                                    items={3}
+                                    nav={false}
+                                    dots={false}
+                                    autoplay={true}
+                                    autoplayTimeout={3000}
+                                    autoplaySpeed={1000}
+                                    smartSpeed={1000}
+                                    responsive={responsiveOptions}
+                                >
+                                    {/* {BlogData.slice(1).reverse().slice(0, 3).map((item) => ( */}
+                                    {apiData?.map((item) => (
+                                        <div className="blog-box-item" key={item._id}>
+                                            <Link to={{
+                                                pathname: `/blogs/${formatPathname(item.tag)}/`
+                                            }} onClick={scrollToTop}>
+                                                <img src={item.catimageUrl} alt={item.category} />
+                                                <div className="blog-card-desc">
+                                                    <p>{new Date(item.date).toLocaleDateString()}</p>
+                                                    <h6>{item.category}</h6>
+                                                    <p>{trimDescription(item.categorydesc)}</p>
+                                                </div>
+                                            </Link>
+                                            <div className="blog-box-button">
+                                                <Link to={{
+                                                    pathname: `/blogs/${formatPathname(item.tag)}/`
+                                                }} onClick={scrollToTop}>View More</Link>
+                                            </div>
+                                        </div>
+                                    ))}
+
+                                </ReactOwlCarousel>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     )
