@@ -80,13 +80,11 @@ const BlogDetails = () => {
                                     <div className="blog-body-detail">
                                         <p>{blogDetail.categorydesc}</p>
                                         {blogDetail.subcategories?.map((item) => (
-                                            <>
-                                                <div key={item._id}>
-                                                    {item.imageUrl ? <img src={item.imageUrl} alt={blogDetail.name} /> : null}
-                                                    {item.name ? <h5>{item.name}</h5> : null}
-                                                    {item.description ? <p>{item.description}</p> : null}
-                                                </div>
-                                            </>
+                                            <div key={item._id}>
+                                                {item.imageUrl ? <img src={item.imageUrl} alt={blogDetail.name} /> : null}
+                                                {item.name ? <h5>{item.name}</h5> : null}
+                                                {item.description ? <p>{item.description}</p> : null}
+                                            </div>
                                         ))}
                                     </div>
                                 </div>

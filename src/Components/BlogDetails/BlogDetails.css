@@ -13,3 +13,8 @@
   text-align: center;
   margin: 2rem 0;
 }
+
+.blog-body-detail img{
+  width: 100%;
+  filter: grayscale();
+}
