@@ -22,22 +22,22 @@ const Footer = (props) => {
                         <h3>About</h3>
                         <ul>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/about">About Us</Link>
+                                <Link onClick={scrollToTop} to="/about">About Us</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/careers">Careers</Link>
+                                <Link onClick={scrollToTop} to="/careers">Careers</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/services">CSR</Link>
+                                <Link onClick={scrollToTop} to="/services">CSR</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/partners">Partners</Link>
+                                <Link onClick={scrollToTop} to="/partners">Partners</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/">Become a freelancer</Link>
+                                <Link onClick={scrollToTop} to="/">Become a freelancer</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/">Whistleblower</Link>
+                                <Link onClick={scrollToTop} to="/">Whistleblower</Link>
                             </li>
                         </ul>
                     </div>
@@ -45,25 +45,25 @@ const Footer = (props) => {
                         <h3>Quick Links</h3>
                         <ul>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/platform">Platform</Link>
+                                <Link onClick={scrollToTop} to="/platform">Platform</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/smart-editor">Smart Editor</Link>
+                                <Link onClick={scrollToTop} to="/smart-editor">Smart Editor</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/integration">Integration</Link>
+                                <Link onClick={scrollToTop} to="/integration">Integration</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/inlayout-editor">InLayout Editor</Link>
+                                <Link onClick={scrollToTop} to="/inlayout-editor">InLayout Editor</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/advanced-ai">Advanced AI</Link>
+                                <Link onClick={scrollToTop} to="/advanced-ai">Advanced AI</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/expert-service">Expert Service</Link>
+                                <Link onClick={scrollToTop} to="/expert-service">Expert Service</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/information-security">Information security</Link>
+                                <Link onClick={scrollToTop} to="/information-security">Information security</Link>
                             </li>
                         </ul>
                     </div>
@@ -71,22 +71,22 @@ const Footer = (props) => {
                         <h3>Inportant Links</h3>
                         <ul>
                             <li>
-                                <Link onClick={scrollToTop} href="/gmls/blogs">Blog</Link>
+                                <Link onClick={scrollToTop} to="/blogs">Blog</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} href="/gmls/developer-portal">Developer portal</Link>
+                                <Link onClick={scrollToTop} to="/developer-portal">Developer portal</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} href="/gmls/customer-stories">Customer Stories</Link>
+                                <Link onClick={scrollToTop} to="/customer-stories">Customer Stories</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} href="/gmls/customer-videos">Customer Videos</Link>
+                                <Link onClick={scrollToTop} to="/customer-videos">Customer Videos</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} href="/gmls/recorded-webinars">Recorded webinars</Link>
+                                <Link onClick={scrollToTop} to="/recorded-webinars">Recorded webinars</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} href="/gmls/">Sign up for our newsletter</Link>
+                                <Link onClick={scrollToTop} to="/">Sign up for our newsletter</Link>
                             </li>
                         </ul>
                     </div>
@@ -94,19 +94,19 @@ const Footer = (props) => {
                         <h3>Our Services</h3>
                         <ul>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/translation-services">Translation Services</Link>
+                                <Link onClick={scrollToTop} to="/translation-services">Translation Services</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/interpretation-services">Interpretation Services</Link>
+                                <Link onClick={scrollToTop} to="/interpretation-services">Interpretation Services</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/transcription-services">Transcription Services</Link>
+                                <Link onClick={scrollToTop} to="/transcription-services">Transcription Services</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/apostille-services">Apostille Services</Link>
+                                <Link onClick={scrollToTop} to="/apostille-services">Apostille Services</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/gmls/simultaneous-equipment">Simultaneous Equipment</Link>
+                                <Link onClick={scrollToTop} to="/simultaneous-equipment">Simultaneous Equipment</Link>
                             </li>
                         </ul>
                     </div>
@@ -125,14 +125,14 @@ const Footer = (props) => {
             <div className="footer-copyright">
                 <div className="footer-box3">
                     <ul>
-                        <li><Link onClick={scrollToTop} to="/gmls/">Term & Conditions</Link></li>
-                        <li><Link onClick={scrollToTop} to="/gmls/">Privacy Policy</Link></li>
-                        <li><Link onClick={scrollToTop} to="/gmls/">Email preferences</Link></li>
-                        <li><Link onClick={scrollToTop} to="/gmls/">Cookies</Link></li>
+                        <li><Link onClick={scrollToTop} to="/">Term & Conditions</Link></li>
+                        <li><Link onClick={scrollToTop} to="/">Privacy Policy</Link></li>
+                        <li><Link onClick={scrollToTop} to="/">Email preferences</Link></li>
+                        <li><Link onClick={scrollToTop} to="/">Cookies</Link></li>
                     </ul>
                 </div>
                 <p>© 2024 Global Multilingua Services </p>
-                <p>Designed by :<a href="https://globalitsources.com/">&#160; Global IT Sources</a></p>
+                <p>Designed by :<Link to="https://globalitsources.com/">&#160; Global IT Sources</Link></p>
             </div>
         </div>
     )

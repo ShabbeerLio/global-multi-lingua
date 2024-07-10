@@ -56,9 +56,8 @@ function App() {
     const meta = apiData.find(item => formatPathname(item.page) === formattedPath);
     return meta && meta.subcategories.length > 0
       ? { title: meta.subcategories[0].title, descriptions: meta.subcategories[0].description }
-      : { title: "", descriptions: "" };
+      : { title: "Translation Services Delhi, Interpretation Services Delhi, Best Language Translation Service Provider India", descriptions: "We are reputed language translation & interpretation service provider in Delhi under the name of Global Multilingua Services, Translation Services Delhi, Interpretation Services Delhi" };
   };
-  console.log(getMeta('home'), "meta")
 
   return (
     <>
