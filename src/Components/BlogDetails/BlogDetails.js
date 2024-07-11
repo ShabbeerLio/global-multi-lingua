@@ -9,9 +9,10 @@ const BlogDetails = (props) => {
     /* global dataLayer */
     const location = useLocation();
     const { pathName } = useParams();
+    const meta = props.getMeta(`blogs/${pathName}`);
 
     useEffect(() => {
-        document.title = props.title;
+        document.title = meta.title;
 
         const canonicalUrl = `${window.location.origin}${location.pathname}`;
         let canonicalLink = document.querySelector("link[rel='canonical']");
@@ -24,7 +25,7 @@ const BlogDetails = (props) => {
             document.head.appendChild(canonicalLink);
         }
 
-        const description = props.descriptions;
+        const description = meta.descriptions;
         let metaDescription = document.querySelector("meta[name='description']");
         if (metaDescription) {
             metaDescription.setAttribute("content", description);
@@ -55,7 +56,7 @@ const BlogDetails = (props) => {
         //     gtag('config', 'G-3BK9F87D6E');
         //   };
         // }
-    }, [props.title, props.descriptions, location.pathname]);
+    }, [meta.title, meta.descriptions, location.pathname]);
 
     // Api
     const [apiData, setApiData] = useState(null);

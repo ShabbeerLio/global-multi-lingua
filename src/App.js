@@ -20,6 +20,7 @@ import LanguageCard from './Components/LanguageCard/LanguageCard';
 import Host from './Pages/Host';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
 
@@ -65,6 +66,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home {...getMeta('home')} />} />
+          <Route path="/*" exact element={<NotFound  getMeta={getMeta}/>} />
           <Route path="/about" exact element={<About {...getMeta('about')} />} />
           <Route path="/translation-services" exact element={<Translation {...getMeta('translation-services')} />} />
           <Route path="/interpretation-services" exact element={<Interpretation {...getMeta('interpretation-services')} />} />
@@ -74,13 +76,13 @@ function App() {
           <Route path="/european-languages" exact element={<Languages heading={"European"} {...getMeta('european-languages')} />} />
           <Route path="/asian-languages" exact element={<Languages heading={"Asian"} {...getMeta('asian-languages')} />} />
           <Route path="/indian-languages" exact element={<Languages heading={"Indian"} {...getMeta('indian-languages')} />} />
-          <Route path="/:pathName" exact element={<LanguageCard {...getMeta(window.location.pathname.slice(1))} />} />
           <Route path="/services" exact element={<Services {...getMeta('services')} />} />
           <Route path="/industry" exact element={<Industry {...getMeta('industry')} />} />
           <Route path="/clients" exact element={<Clients {...getMeta('clients')} />} />
           <Route path="/contact" exact element={<Contact {...getMeta('contact')} />} />
           <Route path="/blogs" exact element={<Blogs {...getMeta('blogs')} />} />
-          <Route path="/blogs/:pathName" exact element={<BlogDetails {...getMeta(window.location.pathname.slice(7))} />} />
+          <Route path="/blogs/:pathName" exact element={<BlogDetails getMeta={getMeta} />} />
+          <Route path="/:pathName" exact element={<LanguageCard getMeta={getMeta} />} />
         </Routes>
         <Footer />
       </BrowserRouter>

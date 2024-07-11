@@ -4,14 +4,16 @@ import { useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Form from '../Form/Form';
 import Host from '../../Pages/Host';
+import NotFound from '../../Pages/NotFound/NotFound';
 
 const LanguageCard = (props) => {
+    const { pathName } = useParams();
+    const meta = props.getMeta(`blogs/${pathName}`);
 
-    /* global dataLayer */
     const location = useLocation();
 
     useEffect(() => {
-        document.title = props.title;
+        document.title = meta.title;
 
         const canonicalUrl = `${window.location.origin}${location.pathname}`;
         let canonicalLink = document.querySelector("link[rel='canonical']");
@@ -24,7 +26,7 @@ const LanguageCard = (props) => {
             document.head.appendChild(canonicalLink);
         }
 
-        const description = props.descriptions;
+        const description = meta.descriptions;
         let metaDescription = document.querySelector("meta[name='description']");
         if (metaDescription) {
             metaDescription.setAttribute("content", description);
@@ -34,33 +36,12 @@ const LanguageCard = (props) => {
             metaDescription.setAttribute("content", description);
             document.head.appendChild(metaDescription);
         }
-
-        // Ensure dataLayer is initialized before the GA script loads
-        // window.dataLayer = window.dataLayer || [];
-        // function gtag() {
-        //   dataLayer.push(arguments);
-        // }
-
-        // Load the Google Analytics script only once
-        // const gaScriptId = 'ga-gtag';
-        // if (!document.getElementById(gaScriptId)) {
-        //   const script = document.createElement('script');
-        //   script.id = gaScriptId;
-        //   script.async = true;
-        //   script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3BK9F87D6E';
-        //   document.head.appendChild(script);
-
-        //   script.onload = () => {
-        //     gtag('js', new Date());
-        //     gtag('config', 'G-3BK9F87D6E');
-        //   };
-        // }
-    }, [props.title, props.descriptions, location.pathname]);
+    }, [meta.title, meta.descriptions, location.pathname]);
 
     const [apiData, setApiData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const { pathName } = useParams();
-    // Extract the actual name from the pathname
+    const [notFound, setNotFound] = useState(false);
+
     const actualName = pathName.replace('-translation-services', '');
 
     useEffect(() => {
@@ -75,10 +56,7 @@ const LanguageCard = (props) => {
                 });
 
                 const data = response.data;
-                // Extract all subcategories
-                const subcategories = data.reduce((acc, category) => {
-                    return acc.concat(category.subcategories);
-                }, []);
+                const subcategories = data.reduce((acc, category) => acc.concat(category.subcategories), []);
                 setApiData(subcategories);
                 setLoading(false);
             } catch (error) {
@@ -93,8 +71,13 @@ const LanguageCard = (props) => {
         return actualName.toLowerCase().replace(/\s+/g, '-');
     };
 
-    // const category = apiData?.find(category => category.category === categoryId);
     const subcategory = apiData?.find(sub => formatPathname(sub.name) === actualName);
+
+    useEffect(() => {
+        if (!loading && !subcategory) {
+            setNotFound(true);
+        }
+    }, [loading, subcategory]);
 
     const formattedDescription = subcategory?.description.replace(/\n/g, '<br /><span class="br-padding"></span>');
 
@@ -106,8 +89,10 @@ const LanguageCard = (props) => {
                         <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>
+            ) : notFound ? (
+                <NotFound />
             ) : (
-                <>
+                subcategory && (
                     <div className='LanguageCard-main'>
                         <div className='LanguageCard-box-left'>
                             <h1>{subcategory.name} Translation Services</h1>
@@ -117,7 +102,7 @@ const LanguageCard = (props) => {
                             <Form />
                         </div>
                     </div>
-                </>
+                )
             )}
         </div>
     );
