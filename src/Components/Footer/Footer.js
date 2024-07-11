@@ -34,10 +34,10 @@ const Footer = (props) => {
                                 <Link onClick={scrollToTop} to="/partners">Partners</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/">Become a freelancer</Link>
+                                <Link onClick={scrollToTop} to="/freelancer">Become a freelancer</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/">Whistleblower</Link>
+                                <Link onClick={scrollToTop} to="/whistleblower">Whistleblower</Link>
                             </li>
                         </ul>
                     </div>
@@ -86,7 +86,7 @@ const Footer = (props) => {
                                 <Link onClick={scrollToTop} to="/recorded-webinars">Recorded webinars</Link>
                             </li>
                             <li>
-                                <Link onClick={scrollToTop} to="/">Sign up for our newsletter</Link>
+                                <Link onClick={scrollToTop} to="/newsletter">Sign up for our newsletter</Link>
                             </li>
                         </ul>
                     </div>
@@ -125,10 +125,10 @@ const Footer = (props) => {
             <div className="footer-copyright">
                 <div className="footer-box3">
                     <ul>
-                        <li><Link onClick={scrollToTop} to="/">Term & Conditions</Link></li>
-                        <li><Link onClick={scrollToTop} to="/">Privacy Policy</Link></li>
-                        <li><Link onClick={scrollToTop} to="/">Email preferences</Link></li>
-                        <li><Link onClick={scrollToTop} to="/">Cookies</Link></li>
+                        <li><Link onClick={scrollToTop} to="/t&c">Term & Conditions</Link></li>
+                        <li><Link onClick={scrollToTop} to="/privacy-policy">Privacy Policy</Link></li>
+                        <li><Link onClick={scrollToTop} to="/email-preferences">Email preferences</Link></li>
+                        <li><Link onClick={scrollToTop} to="/cookies">Cookies</Link></li>
                     </ul>
                 </div>
                 <p>© 2024 Global Multilingua Services </p>
