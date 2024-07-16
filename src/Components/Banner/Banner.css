@@ -173,9 +173,16 @@
 
   .banner-left h1 {
     color: black;
-    font-size: 30px;
+    font-size: 26px;
     margin: 15px 0;
   }
+
+  .form-heading h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+}
 
   .banner-left p {
     color: black;

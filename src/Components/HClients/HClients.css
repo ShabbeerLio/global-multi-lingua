@@ -105,4 +105,10 @@
   .hClient-head{
     width: 100%;
   }
+
+  .hClient-head h2 {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 2rem;
+}
 }

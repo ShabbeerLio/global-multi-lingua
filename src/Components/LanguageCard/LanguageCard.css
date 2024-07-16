@@ -75,4 +75,9 @@
   .LanguageCard-box-left {
     width: 100%;
   }
+
+  .LanguageCard-box-left h1 {
+    color: #673de6;
+    font-size: 25px;
+}
 }
