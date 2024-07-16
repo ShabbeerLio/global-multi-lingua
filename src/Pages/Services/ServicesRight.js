@@ -8,6 +8,7 @@ const ServicesRight = () => {
 
     const [apiData, setApiData] = useState(null);
     const [loading, setLoading] = useState(true);
+    console.log(loading)
 
     useEffect(() => {
         const fetchData = async () => {

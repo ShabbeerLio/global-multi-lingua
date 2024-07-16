@@ -20,7 +20,7 @@ import LanguageCard from './Components/LanguageCard/LanguageCard';
 import Host from './Pages/Host';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import NotFound from './Pages/NotFound/NotFound';
+import TermCondition from './Pages/TermCondition/TermCondition';
 
 function App() {
 
@@ -66,7 +66,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home {...getMeta('home')} />} />
-          <Route path="/*" exact element={<NotFound  getMeta={getMeta}/>} />
           <Route path="/about" exact element={<About {...getMeta('about')} />} />
           <Route path="/translation-services" exact element={<Translation {...getMeta('translation-services')} />} />
           <Route path="/interpretation-services" exact element={<Interpretation {...getMeta('interpretation-services')} />} />
@@ -79,6 +78,7 @@ function App() {
           <Route path="/services" exact element={<Services {...getMeta('services')} />} />
           <Route path="/industry" exact element={<Industry {...getMeta('industry')} />} />
           <Route path="/clients" exact element={<Clients {...getMeta('clients')} />} />
+          <Route path="/term-&-conditions" exact element={<TermCondition {...getMeta('term-&-conditions')} />} />
           <Route path="/contact" exact element={<Contact {...getMeta('contact')} />} />
           <Route path="/blogs" exact element={<Blogs {...getMeta('blogs')} />} />
           <Route path="/blogs/:pathName" exact element={<BlogDetails getMeta={getMeta} />} />

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import "./Services.css"
 import ServicesRight from './ServicesRight'
-import languages from './ServiceData'
 import timg from "../../Assets/Services/translation-services.jpg"
 import { useLocation } from 'react-router-dom'
 
