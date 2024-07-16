@@ -125,10 +125,9 @@ const Footer = (props) => {
             <div className="footer-copyright">
                 <div className="footer-box3">
                     <ul>
-                        <li><Link onClick={scrollToTop} to="/term-&-conditions">Term & Conditions</Link></li>
+                        <li><Link onClick={scrollToTop} to="/terms-and-conditions">Terms & Conditions</Link></li>
                         <li><Link onClick={scrollToTop} to="/privacy-policy">Privacy Policy</Link></li>
-                        <li><Link onClick={scrollToTop} to="/email-preferences">Email preferences</Link></li>
-                        <li><Link onClick={scrollToTop} to="/cookies">Cookies</Link></li>
+                        <li><Link onClick={scrollToTop} to="/disclaimer">Disclaimer</Link></li>
                     </ul>
                 </div>
                 <p>© 2024 Global Multilingua Services </p>

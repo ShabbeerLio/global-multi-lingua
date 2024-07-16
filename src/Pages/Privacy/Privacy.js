@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
-import "./TermCondition.css"
 import { useLocation } from 'react-router-dom';
 
-const TermCondition = (props) => {
+const Privacy = (props) => {
 
     /* global dataLayer */
     const location = useLocation();
@@ -57,13 +56,12 @@ const TermCondition = (props) => {
     return (
         <div className='TermCondition'>
             <div className='TermCondition-main'>
-                <h1>Terms And Conditions</h1>
-                <p>These Terms and Conditions (“Terms and Conditions”) are an electronic record that are bound between the user of this website (“Applicant/You/Yours”) and M/s Global Multilingua Services or www.globalmultilingua.com (“Company”). The applicant acknowledges that he/she has read all portions of Terms and condition and agrees to be bound by these conditions respectively. </p>
-                <p>We (www.globalmultilingua.com or Global MultilinguaServices) shall not be bound by any separate agreement which is in writing signed by our representative.</p>
-                <p>Please read all the following Terms and condition including Damages, Lost Document, Delayed Document, Cancellation and Refund Policy, Privacy Policy etc. carefully before using this website and/or availing any service from us.</p>
+                <h1>Privacy Policy</h1>
+                <p>All information including Name, Contact Number, Email id, requirement provided by the applicant/you on his website are secured and are used only for providing services to applicant/you. We neither disclose your information nor circulate it to third parties in accordance with the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011. Cookies may use to improve feature and our range of services for your better experience of using the Website.</p>
+                
             </div>
         </div>
     )
 }
 
-export default TermCondition
+export default Privacy
