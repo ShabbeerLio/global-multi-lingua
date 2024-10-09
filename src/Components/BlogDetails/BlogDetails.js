@@ -88,7 +88,7 @@ const BlogDetails = (props) => {
         return title.toLowerCase().replace(/\s+/g, '-');
     };
 
-    const blogDetail = apiData?.find(item => item.tag === pathName);
+    const blogDetail = apiData?.find(item => formatPathname(item.tag) === pathName);
     // console.log(blogDetail, "data")
 
     // if (!blogDetail) {
